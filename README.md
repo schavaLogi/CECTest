@@ -25,5 +25,14 @@ Native Module link : The Packages has Native modules we must link it
 react-native link module_name (react-native-code-push/react-native-localization/react-native-send-intent/react-native-ble-manager)
 
 
-Advice:
+Troubleshoot Advice:
 install all the required modules using command bash (windows command npm might give problem)
+
+
+Run :
+npm install
+cd android && ./gradlew clean
+
+cd ..
+react-native run-android
+
