@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/lip_tab_container_width"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:minHeight="400dp"
+    android:background="@android:color/white"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:paddingTop="20dp">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/lip_titlebar_layout"
+        android:visibility="gone" />
+
+    <com.logitech.lip.ui.common.CustomTextView
+        android:id="@+id/termsDescription"
+        style="@style/lip_login_descriptionLargeTextView"
+        android:layout_below="@+id/header"
+        android:text="@string/lip_sign_up_license_agreement_title"
+        android:textColor="@android:color/black" />
+
+    <include
+        android:id="@+id/termsCondition"
+        layout="@layout/lip_terms_conditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/termsDescription"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="50dp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/termsCondition"
+        android:orientation="vertical">
+
+        <com.logitech.lip.ui.common.CustomButton
+            android:id="@+id/terms_accept"
+            style="@style/lip_secondary_green_button"
+            android:layout_margin="@dimen/lip_terms_buttons_margin"
+            android:text="@string/lip_sign_up_accept" />
+
+        <com.logitech.lip.ui.common.CustomButton
+            android:id="@+id/terms_decline"
+            style="@style/lip_tertiary_grey_button"
+            android:layout_margin="@dimen/lip_terms_buttons_margin"
+            android:text="@string/lip_sign_up_decline" />
+    </LinearLayout>
+
+</RelativeLayout>

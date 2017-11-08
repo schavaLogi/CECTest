@@ -1,0 +1,25 @@
+UI-v1.0
+1. Harmony Specific UI with only Sigin, Signup and forgot password flow
+
+UI-v2.0
+1. Standard UI to be compatable with all applications
+2. Added Opt-In and Error screen
+3. UI can be customized based on application (ex: Font, Buttons, window background)
+4. Google login version is 8.3.0
+5. Facebook SDK version is 4.9.0 to be compatabile for minSdk 14 with Harmony
+
+Limitation :
+Supported either portrait or landscape only
+
+
+UI-v3.0 (Future plan)
+1. Google Login version 9.0.2
+2. UI can be easily adopted to portrait and landscape as fragments supported orientation
+3. Integrated Espresso framework for UI functional testing
+4. Facebook sdk version to be 4.13.1
+
+
+UI-v5.0
+1. Updated GMS version to 11.0.1
+2. Facebook SDK version updated to 4.23.0
+3. Added Multiple Identity support(Multiple tokens saving with email as uniq id)

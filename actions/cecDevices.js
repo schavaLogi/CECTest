@@ -1,0 +1,17 @@
+export const ADD_CEC_DEVICES = 'ADD_CEC_DEVICES';
+export const UPDATE_CEC_DEVICE = 'UPDATE_CEC_DEVICE';
+
+export function addCECDevice(devices) {
+    return {
+        type: ADD_CEC_DEVICES,
+        devices: devices
+    }
+}
+
+export function updateCECDevice(id, device) {
+    return {
+        type: ADD_CEC_DEVICES,
+        id: id,
+        device: device
+    }
+}

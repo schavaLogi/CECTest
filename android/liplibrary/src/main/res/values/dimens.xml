@@ -1,0 +1,46 @@
+<resources>
+    <!-- Title bar dimensions -->
+    <dimen name="lip_title_bar_height">64dp</dimen>
+    <dimen name="lip_title_bar_text_size">18sp</dimen>
+
+    <!-- Tablet container dimensions -->
+    <dimen name="lip_tab_container_width">0dp</dimen>
+    <dimen name="lip_tab_container_padding_bottom">0dp</dimen>
+
+    <!-- Selector screen -->
+    <dimen name="lip_selector_buttons_margin">0dp</dimen>
+    <dimen name="lip_login_button_text_size">18sp</dimen>
+
+    <!-- Common -->
+    <dimen name="lip_buttonCommon_text_size">18sp</dimen>
+    <dimen name="lip_buttonCommon_height">56dp</dimen>
+    <dimen name="lip_login_editTextCommon_height">19dp</dimen>
+    <dimen name="lip_login_editTextCommon_text_size">16sp</dimen>
+    <dimen name="lip_login_autoCompleteTextCommon_height">19dp</dimen>
+    <dimen name="lip_login_autoCompleteTextCommon_text_size">16sp</dimen>
+
+
+    <dimen name="lip_login_textViewCommon_text_size">16sp</dimen>
+
+
+    <dimen name="lip_login_labelTextView_height">15dp</dimen>
+    <dimen name="lip_login_labelTextView_text_size">12sp</dimen>
+
+    <dimen name="lip_login_labelClickableTextView_height">20dp</dimen>
+    <dimen name="lip_login_labelClickableTextView_text_size">14sp</dimen>
+
+    <dimen name="lip_login_checkBoxTextView_text_size">14sp</dimen>
+
+    <dimen name="lip_login_descriptionLargeTextView_text_size">32sp</dimen>
+    <dimen name="descriptionSmallTextView_text_size">14sp</dimen>
+
+    <dimen name="lip_confirm_email_desc_textview_text_size">16sp</dimen>
+
+    <dimen name="lip_window_scroll_view_padding_bottom">40dp</dimen>
+
+    <dimen name="lip_error_content_padding">24dp</dimen>
+    <dimen name="lip_error_title_text_size">32sp</dimen>
+
+    <!-- SLA screen -->
+    <dimen name="lip_terms_buttons_margin">0dp</dimen>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/lip_titlebar_layout"
+        android:visibility="visible" />
+
+    <com.logitech.lip.ui.common.CustomTextView
+        android:id="@+id/termsDescription"
+        style="@style/lip_login_descriptionLargeTextView"
+        android:layout_above="@+id/termsCondition"
+        android:layout_below="@+id/header"
+        android:text="@string/lip_sign_up_logitech_title" />
+
+    <include
+        android:id="@+id/termsCondition"
+        layout="@layout/lip_terms_conditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonContainer"
+        android:layout_marginBottom="10dp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <com.logitech.lip.ui.common.CustomButton
+            android:id="@+id/terms_accept"
+            style="@style/lip_primary_white_button"
+            android:layout_margin="@dimen/lip_terms_buttons_margin"
+            android:text="@string/lip_sign_up_accept" />
+
+        <com.logitech.lip.ui.common.CustomButton
+            android:id="@+id/terms_decline"
+            style="@style/lip_secondary_green_button"
+            android:layout_margin="@dimen/lip_terms_buttons_margin"
+            android:text="@string/lip_sign_up_decline" />
+    </LinearLayout>
+
+</RelativeLayout>

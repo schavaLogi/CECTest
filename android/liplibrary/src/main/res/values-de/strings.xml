@@ -1,0 +1,90 @@
+<resources>
+    <string name="lip_sign_up_welcome">WILLKOMMEN</string>
+    <string name="lip_sign_up_first_name">Vorname</string>
+    <string name="lip_sign_up_last_name">Nachname</string>
+    <string name="lip_sign_up_logi_id">Ihre Logi-ID</string>
+    <string name="lip_sign_up_email">E-Mail-Adresse</string>
+    <string name="lip_sign_up_password">Kennwort</string>
+    <string name="lip_sign_up_password_hint">Mindestlänge: 8 Zeichen</string>
+    <string name="lip_sign_up_confirm_password">Kennwort bestätigen</string>
+    <string name="lip_sign_up_forgot_password">Kennwort vergessen?</string>
+    <string name="lip_sign_up_need_account">Sie benötigen ein neues Konto?</string>
+    <string name="lip_sign_up_show_password">Kennwort anzeigen</string>
+
+    <string name="lip_sign_up_already_have_account">Sie haben bereits ein Konto?</string>
+
+    <string name="lip_sign_up_terms_use_privacy_policy">Akzeptieren Sie die \uFF0D\u0340Nutzungsbedingungen\uFF0D und \uFF0D\u0341Datenschutzbestimmungen\uFF0D.</string>
+    <string name="lip_sign_up_terms_use">NUTZUNGSBEDINGUNGEN</string>
+    <string name="lip_sign_up_privacy_policy">DATENSCHUTZ</string>
+    <string name="lip_sign_up_keep_me_informed">Informieren Sie mich über Sonderangebote sowie exklusive und neue Produkte von Logitech.</string>
+    <string name="lip_sign_up_receive_updates">Empfangen Sie regelmäßig E-Mails von Logi.</string>
+    <string name="lip_sign_up_forgot_password_instruction">Die Anweisungen zum Zurücksetzen Ihres Kennworts werden an die von Ihnen angegebene E-Mail-Adresse gesendet.</string>
+    <string name="lip_sign_up_license_agreement_title">Lizenzvertrag</string>
+
+    <string name="lip_sign_up_tou_opt_in_desc">Akzeptieren Sie die Nutzungsbedingungen und Datenschutzbestimmungen, um fortzufahren.</string>
+
+    <string name="lip_sign_up_create">Create</string>
+    <string name="lip_sign_up_submit">Senden</string>
+    <string name="lip_sign_up_accept">Akzeptieren</string>
+    <string name="lip_sign_up_decline">Ablehnen</string>
+    <string name="lip_sign_up_send_email">E-MAIL SENDEN</string>
+
+
+    <string name="lip_sign_up_google">Google</string>
+    <string name="lip_sign_up_facebook">Facebook</string>
+    <string name="lip_sign_up_logitech_title">Logitech</string>
+
+    <string name="lip_sign_up_connecting_facebook">Verbindung mit Facebook</string>
+    <string name="lip_sign_up_connecting_google">Verbindung mit Google</string>
+    <string name="lip_sign_up_connecting_logitech">Verbindung mit Logitech</string>
+
+    <string name="lip_sign_up_account_create_progress">Konto wird erstellt</string>
+    <string name="lip_sign_up_account_signin_progress">Anmelden...</string>
+
+    <string name="lip_sign_up_login">ANMELDEN</string>
+    <string name="lip_sign_up_forgot_password_title">KENNWORT VERGESSEN</string>
+    <string name="lip_sign_up_forgot_password_send_email">E-Mail wird gesendet...</string>
+    <string name="lip_sign_up_forgot_password_email_sent_success">Wir haben ein Passwort-Reset-E-Mail an Ihre E-Mail-Adresse gesendet, die Sie geliefert.\n\nSehen Sie in Ihrem Posteingang nach, um fortzufahren.</string>
+    <string name="lip_sign_up_create_account">KONTO ERSTELLEN</string>
+    <string name="lip_sign_up_facebook_reading_info">Profilinfos werden gelesen...</string>
+
+    <!-- Confirm email screen -->
+    <string name="lip_sign_up_confirm_email">E-MAIL-ADRESSE BESTÄTIGEN</string>
+    <string name="lip_sign_up_confirm_email_instruction">Eine Bestätigungs-E-Mail wurde gesendet an</string>
+    <string name="lip_sign_up_confirm_email_not_received">Tippen Sie auf den Link in der E-Mail, um Ihre Adresse zu bestätigen.\n\nWenn Sie innerhalb der nächsten 5 Minuten keine E-Mail erhalten, sehen Sie im Junk-Ordner nach oder klicken Sie unten auf die Schaltfläche \"Erneut senden\".</string>
+    <string name="lip_sign_up_resend_email">ERNEUT SENDEN</string>
+    <string name="lip_sign_up_verify_email">Später bestätigen</string>
+
+
+    <string name="lip_sign_up_error_toast_no_network">Verbindung fehlgeschlagen. Überprüfen Sie die Internetverbindung und versuchen Sie es noch einmal.</string>
+    <string name="lip_sign_up_error_toast_timeout">Zeitlimit für Anfrage überschritten. Bitte versuchen Sie es noch einmal.</string>
+    <string name="lip_sign_up_error_toast_no_email_access_facebook">E-Mail-Berechtigung deaktiviert.\nGehen Sie in Ihrem Facebook-Konto zu \"Einstellungen &gt; Apps\", löschen Sie diese App und versuchen Sie es erneut.</string>
+    <string name="lip_sign_up_error_toast_no_email_facebook">E-Mail-Adresse erforderlich.\nVerbinden Sie sich mit Facebook mithilfe Ihrer E-Mail-Adresse.</string>
+    <string name="lip_sign_up_error_toast_email_exists">Diese E-Mail-Adresse ist bereits registriert. Bitte versuchen Sie es mit einer anderen E-Mail-Adresse oder verwenden Sie Facebook oder Google.</string>
+    <string name="lip_sign_up_error_toast_accept_conditions">Akzeptieren Sie die Nutzungsbedingungen und Datenschutzbestimmungen</string>
+    <!--<string name="lip_sign_up_error_toast_enter_email_pass">Please enter email address/password</string>-->
+    <string name="lip_sign_up_error_toast_min_count_pwd">Das Kennwort muss mindestens 8 Zeichen lang sein.</string>
+    <string name="lip_sign_up_error_toast_max_count_pwd">Das Kennwort darf höchstens 100 Zeichen lang sein.</string>
+    <string name="lip_sign_up_error_toast_enter_pass">Geben Sie ein Kennwort ein</string>
+    <string name="lip_sign_up_error_toast_invalid_email">Geben Sie eine gültige E-Mail-Adresse ein.</string>
+    <!--<string name="lip_sign_up_error_toast_name_missing">Please enter first name and last name</string>-->
+    <string name="lip_sign_up_error_toast_first_name_missing">Geben Sie einen Vornamen ein.</string>
+    <string name="lip_sign_up_error_toast_last_name_missing">Geben Sie einen Nachnamen ein.</string>
+    <string name="lip_sign_up_error_toast_internal_error">Es ist ein Fehler aufgetreten. Versuchen Sie es später noch einmal.</string>
+    <string name="lip_sign_up_error_toast_cancel_error">Abgebrochen durch Benutzer</string>
+    <string name="lip_sign_up_error_toast_account_locked">Ihr Konto wurde gesperrt, da das Kennwort mehrmals falsch eingegeben wurde. Versuchen Sie es in 30 Minuten erneut.</string>
+    <string name="lip_sign_up_error_toast_incorrect_cred">Falsche E-Mail-Adresse oder falsches Kennwort. Wenn Sie zuvor Facebook oder Google verwendet haben, geben Sie hier dieselben Zugangsdaten ein, oder setzen Sie Ihr Kennwort zurück.</string>
+    <string name="lip_sign_up_error_toast_no_email">Falsche E-Mail-Adresse. Geben Sie eine gültige E-Mail-Adresse ein oder melden Sie sich über Facebook oder Google bei Ihrem Konto an.</string>
+    <string name="lip_sign_up_error_input_invalid">Ungültige Eingabe</string>
+    <string name="lip_sign_up_with">REGISTRIEREN MIT:</string>
+    <string name="lip_login_with">ANMELDEN MIT:</string>
+    <string name="lip_sign_up_create_id">LOGI-ID ERSTELLEN</string>
+    <string name="lip_sign_up_continue">FORTSETZEN</string>
+
+    <string name="lip_sign_up_access_denied">ZUGRIFF VERWEIGERT</string>
+
+    <string name="lip_sign_up_password_reset">Zurücksetzen des Kennworts</string>
+    <string name="lip_error_ok">OK</string>
+    <string name="lip_signin_error_password_deleted">Danke, dass Sie sich mit %s angemeldet haben. Wir empfehlen Ihnen, auf dieselbe Weise auf Ihr Konto zuzugreifen.\n\nAus Sicherheitsgründen wurde Ihr aktuelles Kennwort aus dem System entfernt. Sie können über die Kontoeinstellungen oder über die E-Mail, die Sie erhalten haben, ein neues Kennwort erzeugen. </string>
+
+</resources>

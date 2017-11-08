@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  LIP Library Colors for Login Selector Start -->
+    <color name="lip_login_button_text_color">#f3f3f3</color>
+    <color name="lip_facebook_button_selected">#3576c3</color>
+    <color name="lip_facebook_button_normal">#37559d</color>
+    <color name="lip_google_button_selected">#e25e5c</color>
+    <color name="lip_google_button_normal">#da4336</color>
+    <color name="lip_email_button_selected">@android:color/white</color>
+    <color name="lip_email_button_normal">@android:color/white</color>
+    <!--  LIP Library Colors for Login Selector End -->
+
+    <!--  LIP Library Toast Colors Start -->
+    <color name="lip_toast_bg_color">#F65A50</color>
+    <!--  LIP Library Toast Colors End -->
+
+    <!--  LIP Library View Boarder & Text Colors Start -->
+    <color name="lip_primary_white_text_color">#ffffff</color>
+    <color name="lip_primary_white_button_text">#2f3132</color>
+    <color name="lip_secondary_green_text_color">#00EAD0</color>
+    <color name="lip_view_border_color">#c3c6c8</color>
+    <color name="lip_label_text_color">#c3c6c8</color>
+    <!--  LIP Library View Boarder & Test Colors End -->
+
+    <!--  LIP Library Button states Start -->
+    <color name="lip_primary_white_button_pressedstate">#979898</color>
+    <color name="lip_primary_white_button_normalstate">@android:color/white</color>
+    <color name="lip_secondary_green_button_pressedstate">#00EAD0</color>
+    <color name="lip_secondary_green_button_normalstate">#00EAD0</color>
+    <color name="lip_tertiary_grey_button_pressedstate">#39424a</color>
+    <color name="lip_tertiary_grey_button_normalstate">#47535d</color>
+    <!--  LIP Library Button states End -->
+
+    <!--  LIP Library background colors Start -->
+    <color name="lip_window_background">#2f3132</color>
+    <color name="lip_login_background">#00BFFF</color>
+    <color name="lip_login_background_alpha">#0098cc</color>
+    <!--  LIP Library background colors End -->
+
+    <color name="lip_password_hint_color">#6B7074</color>
+
+</resources>

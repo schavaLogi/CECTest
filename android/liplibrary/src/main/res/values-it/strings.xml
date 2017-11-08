@@ -1,0 +1,90 @@
+<resources>
+    <string name="lip_sign_up_welcome">BENVENUTO</string>
+    <string name="lip_sign_up_first_name">Nome</string>
+    <string name="lip_sign_up_last_name">Cognome</string>
+    <string name="lip_sign_up_logi_id">Logi ID</string>
+    <string name="lip_sign_up_email">E-mail</string>
+    <string name="lip_sign_up_password">Password</string>
+    <string name="lip_sign_up_password_hint">Lunghezza minima 8 caratteri</string>
+    <string name="lip_sign_up_confirm_password">Conferma password</string>
+    <string name="lip_sign_up_forgot_password">Password dimenticata?</string>
+    <string name="lip_sign_up_need_account">Creare un nuovo account?</string>
+    <string name="lip_sign_up_show_password">Mostra password</string>
+
+    <string name="lip_sign_up_already_have_account">Si dispone già di un account?</string>
+
+    <string name="lip_sign_up_terms_use_privacy_policy">Accettare －̀Termini di utilizzo－ e －́Informativa sulla privacy－</string>
+    <string name="lip_sign_up_terms_use">TERMINI DI UTILIZZO</string>
+    <string name="lip_sign_up_privacy_policy">INFORMATIVA SULLA PRIVACY</string>
+    <string name="lip_sign_up_keep_me_informed">Desidero essere informato sulle offerte speciali e i prodotti nuovi o esclusivi Logitech.</string>
+    <string name="lip_sign_up_receive_updates">Desidero ricevere e-mail periodiche da Logitech.</string>
+    <string name="lip_sign_up_forgot_password_instruction">Le istruzioni per reimpostare la password verranno inviate all\'ID e-mail.</string>
+    <string name="lip_sign_up_license_agreement_title">Accordo di licenza</string>
+
+    <string name="lip_sign_up_tou_opt_in_desc">Per continuare è necessario accettare i termini di utilizzo e l\'informativa sulla privacy.</string>
+
+    <string name="lip_sign_up_create">Crea</string>
+    <string name="lip_sign_up_submit">Invia</string>
+    <string name="lip_sign_up_accept">Accetta</string>
+    <string name="lip_sign_up_decline">Rifiuta</string>
+    <string name="lip_sign_up_send_email">INVIA E-MAIL</string>
+
+
+    <string name="lip_sign_up_google">Google</string>
+    <string name="lip_sign_up_facebook">Facebook</string>
+    <string name="lip_sign_up_logitech_title">Logitech</string>
+
+    <string name="lip_sign_up_connecting_facebook">Connessione a Facebook</string>
+    <string name="lip_sign_up_connecting_google">Connessione a Google</string>
+    <string name="lip_sign_up_connecting_logitech">Connessione a Logitech</string>
+
+    <string name="lip_sign_up_account_create_progress">Creazione dell\'account</string>
+    <string name="lip_sign_up_account_signin_progress">Accesso in corso...</string>
+
+    <string name="lip_sign_up_login">ACCEDI</string>
+    <string name="lip_sign_up_forgot_password_title">PASSWORD DIMENTICATA</string>
+    <string name="lip_sign_up_forgot_password_send_email">Tentativo di invio e-mail in corso...</string>
+    <string name="lip_sign_up_forgot_password_email_sent_success">Abbiamo inviato un\'e-mail di reimpostazione password all\'indirizzo e-mail indicato.\n\nControllare la casella della posta in arrivo per continuare.</string>
+    <string name="lip_sign_up_create_account">CREA ACCOUNT</string>
+    <string name="lip_sign_up_facebook_reading_info">Elaborazione delle informazioni profilo in corso...</string>
+
+    <!-- Confirm email screen -->
+    <string name="lip_sign_up_confirm_email">CONFERMA E-MAIL</string>
+    <string name="lip_sign_up_confirm_email_instruction">Abbiamo inviato un\'e-mail di verifica a</string>
+    <string name="lip_sign_up_confirm_email_not_received">Toccare il collegamento contenuto nell\'e-mail per confermare l\'indirizzo.\n\nSe non si riceve un\'e-mail entro 5 minuti, controllare la cartella della posta indesiderata o toccare il pulsante di rinvio sottostante.</string>
+    <string name="lip_sign_up_resend_email">RINVIA</string>
+    <string name="lip_sign_up_verify_email">Verifica più tardi</string>
+
+
+    <string name="lip_sign_up_error_toast_no_network">Collegamento non riuscito. Controllare la connessione Internet e riprovare.</string>
+    <string name="lip_sign_up_error_toast_timeout">Richiesta scaduta. Riprovare.</string>
+    <string name="lip_sign_up_error_toast_no_email_access_facebook">Autorizzazione e-mail disabilitata.\nNell\'account di Facebook, accedere a Impostazioni &gt; App, eliminare questa app e riprovare.</string>
+    <string name="lip_sign_up_error_toast_no_email_facebook">Indirizzo e-mail obbligatorio.\nEseguire l\'accesso a Facebook utilizzando l\'indirizzo e-mail.</string>
+    <string name="lip_sign_up_error_toast_email_exists">L\'indirizzo e-mail specificato è già stato registrato. Inserire un indirizzo e-mail diverso o utilizzare Facebook o Google.</string>
+    <string name="lip_sign_up_error_toast_accept_conditions">Accettare i Termini di utilizzo e l\'Informativa sulla privacy</string>
+    <!--<string name="lip_sign_up_error_toast_enter_email_pass">Please enter email address/password</string>-->
+    <string name="lip_sign_up_error_toast_min_count_pwd">La password deve essere lunga almeno 8 caratteri.</string>
+    <string name="lip_sign_up_error_toast_max_count_pwd">La password non deve superare 100 caratteri.</string>
+    <string name="lip_sign_up_error_toast_enter_pass">Inserire la password</string>
+    <string name="lip_sign_up_error_toast_invalid_email">Inserire un indirizzo e-mail valido.</string>
+    <!--<string name="lip_sign_up_error_toast_name_missing">Please enter first name and last name</string>-->
+    <string name="lip_sign_up_error_toast_first_name_missing">Inserire il nome.</string>
+    <string name="lip_sign_up_error_toast_last_name_missing">Inserire il cognome.</string>
+    <string name="lip_sign_up_error_toast_internal_error">Si è verificato un problema. Riprovare tra qualche minuto.</string>
+    <string name="lip_sign_up_error_toast_cancel_error">Annullata dall\'utente</string>
+    <string name="lip_sign_up_error_toast_account_locked">L\'account è stato bloccato a causa di tentativi multipli di accesso con password errata. Riprovare tra 30 minuti.</string>
+    <string name="lip_sign_up_error_toast_incorrect_cred">Indirizzo e-mail o password non corretti. Se sono stati utilizzati Facebook o Google per accedere, utilizzarli nuovamente o reimpostare la password.</string>
+    <string name="lip_sign_up_error_toast_no_email">Indirizzo e-mail non corretto. Inserire un indirizzo e-mail valido o utilizzare Facebook o Google per accedere all\'account.</string>
+    <string name="lip_sign_up_error_input_invalid">Immissione non valida</string>
+    <string name="lip_sign_up_with">REGISTRATI CON:</string>
+    <string name="lip_login_with">ACCEDI CON:</string>
+    <string name="lip_sign_up_create_id">CREA ID LOGI</string>
+    <string name="lip_sign_up_continue">CONTINUA</string>
+
+    <string name="lip_sign_up_access_denied">ACCESSO NEGATO</string>
+
+    <string name="lip_sign_up_password_reset">Reimposta password</string>
+    <string name="lip_error_ok">OK</string>
+    <string name="lip_signin_error_password_deleted">Grazie per aver eseguito l\'accesso con %s. Si consiglia di accedere al proprio account con le stesse modalità.\n\nPer questioni di sicurezza, la password in uso è stata rimossa dal sistema. È possibile generare una nuova password accedendo alle impostazioni dell\'account o dall\'e-mail che è stata inviata all\'indirizzo specificato. </string>
+
+</resources>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lip_frag_sign_up_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lip_window_background">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/lip_titlebar_layout"
+        android:visibility="visible" />
+
+    <View
+        android:id="@+id/lip_signup_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/header"
+        android:alpha="0.1"
+        android:background="@android:color/white"></View>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sign_up_createButton"
+        android:layout_below="@id/lip_signup_divider">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/lip_window_scroll_view_padding_bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65.0dip"
+                android:orientation="vertical">
+
+                <com.logitech.lip.ui.common.CustomTextView
+                    style="@style/lip_login_labelTextView"
+                    android:text="@string/lip_sign_up_email" />
+
+                <com.logitech.lip.ui.common.CustomAutoCompleteText
+                    android:id="@+id/sign_up_email"
+                    style="@style/lip_login_autoCompleteTextEmail">
+
+                </com.logitech.lip.ui.common.CustomAutoCompleteText>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.0dip"
+                android:alpha="0.1"
+                android:background="#ffc3c6c8" />
+
+            <RelativeLayout
+                android:id="@+id/passwordContainer"
+                android:layout_width="match_parent"
+                android:layout_height="65.0dip">
+
+                <com.logitech.lip.ui.common.CustomTextView
+                    android:id="@+id/passwordLabel"
+                    style="@style/lip_login_labelTextView"
+                    android:text="@string/lip_sign_up_password" />
+
+                <com.logitech.lip.ui.common.CustomEditText
+                    android:id="@+id/sign_up_password"
+                    style="@style/lip_login_editTextPassword_hint"
+                    android:layout_below="@id/passwordLabel"
+                    android:layout_toLeftOf="@+id/sign_up_show_password_container" />
+
+                <RelativeLayout
+                    android:id="@+id/sign_up_show_password_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/sign_up_show_password"
+                        android:layout_width="22dip"
+                        android:layout_height="11dip"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/lip_show_password_on" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.0dip"
+                android:alpha="0.1"
+                android:background="#ffc3c6c8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65.0dip"
+                android:orientation="vertical">
+
+                <com.logitech.lip.ui.common.CustomTextView
+                    style="@style/lip_login_labelTextView"
+                    android:text="@string/lip_sign_up_first_name" />
+
+                <com.logitech.lip.ui.common.CustomAutoCompleteText
+                    android:id="@+id/sign_up_firstName"
+                    style="@style/lip_login_autoCompleteTextCommon"
+                    android:inputType="textCapSentences"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.0dip"
+                android:alpha="0.1"
+                android:background="@android:color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65.0dip"
+                android:orientation="vertical">
+
+                <com.logitech.lip.ui.common.CustomTextView
+                    style="@style/lip_login_labelTextView"
+                    android:text="@string/lip_sign_up_last_name" />
+
+                <com.logitech.lip.ui.common.CustomAutoCompleteText
+                    android:id="@+id/sign_up_lastName"
+                    style="@style/lip_login_autoCompleteTextCommon"
+                    android:inputType="textCapSentences"
+                    android:imeOptions="actionDone" />
+            </LinearLayout>
+            <!-- android:layout_marginTop="8.0dip" -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.0dip"
+                android:alpha="0.1"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/white" />
+
+            <com.logitech.lip.ui.common.CustomTextView
+                android:id="@+id/sign_up_already_account"
+                style="@style/lip_login_labelClickableTextView"
+                android:layout_gravity="left"
+                android:text="@string/lip_sign_up_already_have_account" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.logitech.lip.ui.common.CustomButton
+        android:id="@+id/sign_up_createButton"
+        style="@style/lip_primary_white_button"
+        android:layout_alignParentBottom="true"
+        android:text="@string/lip_sign_up_create_account" />
+</RelativeLayout>

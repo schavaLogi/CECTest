@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+     Progress Dialog with transparent background color
+    -->
+    <style name="lip_progressDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!--
+    LIP Library Custom Styles for LogInSelector
+    -->
+
+    <!--  Basic button properties In Sign in Screen  -->
+    <style name="lip_login_button" parent="android:Widget.ImageButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">@dimen/lip_login_button_text_size</item>
+        <item name="android:textColor">@color/lip_login_button_text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">@dimen/lip_selector_buttons_margin</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+    <!--  Facebook button In Sign in Screen  -->
+    <style name="lip_login_button.facebook" parent="lip_login_button">
+        <item name="android:background">@drawable/lip_facebook_button_selector</item>
+        <item name="android:src">@drawable/lip_facebook</item>
+    </style>
+
+    <!--  Google+ button In Sign in Screen  -->
+    <style name="lip_login_button.google" parent="lip_login_button">
+        <item name="android:background">@drawable/lip_google_button_selector</item>
+        <item name="android:src">@drawable/lip_google</item>
+    </style>
+    <!--  EMAIL button In Sign in Screen  -->
+    <style name="lip_login_button.email" parent="lip_login_button">
+        <item name="android:background">@drawable/lip_email_button_selector</item>
+        <!--<item name="android:textColor">@color/lip_primary_white_button_text</item>-->
+    </style>
+
+    <!-- LIP Library Title bar Start  -->
+    <style name="lip_title_bar" parent="Theme.AppCompat">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/lip_title_bar_height</item>
+        <item name="android:background">@android:color/black</item>
+    </style>
+
+    <style name="lip_title_bar_green" parent="lip_title_bar">
+        <item name="android:background">@color/lip_login_background</item>
+    </style>
+    <!-- LIP Library Title bar End  -->
+
+    <!--  LIP Library Buttons Start -->
+    <style name="lip_buttonCommon" parent="android:Widget.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/lip_buttonCommon_height</item>
+        <item name="android:textColor">@color/lip_primary_white_button_text</item>
+        <item name="android:textSize">@dimen/lip_buttonCommon_text_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="lip_primary_white_button" parent="lip_buttonCommon">
+        <item name="android:textColor">@color/lip_primary_white_button_text</item>
+        <item name="android:background">@drawable/lip_primary_white_button_selector</item>
+    </style>
+
+    <style name="lip_secondary_green_button" parent="lip_buttonCommon">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/lip_green_button_selector</item>
+    </style>
+
+    <style name="lip_tertiary_grey_button" parent="lip_buttonCommon">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/lip_tertiary_grey_button_selector</item>
+    </style>
+    <!--  LIP Library Buttons Ends -->
+
+    <!--  LIP Library Edit texts Start -->
+    <style name="lip_login_editTextCommon" parent="android:Widget.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/lip_login_editTextCommon_height</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:inputType">textAutoComplete</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/lip_primary_white_text_color</item>
+        <item name="android:textSize">@dimen/lip_login_editTextCommon_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColorHint">@color/lip_password_hint_color</item>
+    </style>
+
+    <style name="lip_login_editTextPassword" parent="lip_login_editTextCommon">
+        <item name="android:inputType">textPassword</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColorHint">@color/lip_password_hint_color</item>
+    </style>
+
+    <style name="lip_login_editTextPassword_hint" parent="lip_login_editTextPassword">
+        <item name="android:hint">@string/lip_sign_up_password_hint</item>
+    </style>
+
+    <style name="lip_login_autoCompleteTextCommon" parent="android:Widget.AutoCompleteTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:inputType">textAutoComplete</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/lip_primary_white_text_color</item>
+        <item name="android:textSize">@dimen/lip_login_autoCompleteTextCommon_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <!--  Required for Suggestion list background -->
+        <item name="android:popupBackground">#FFFFFF</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="lip_login_autoCompleteTextEmail" parent="lip_login_autoCompleteTextCommon">
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="lip_forgot_password_autoCompleteTextEmail" parent="lip_login_autoCompleteTextCommon">
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:imeOptions">actionDone</item>
+        <!--<item name="android:textColor">@color/lip_secondary_green_text_color</item>-->
+    </style>
+
+    <!--  LIP Library Edit texts Ends -->
+
+    <!--  LIP Library text views Starts -->
+    <style name="lip_login_textViewCommon" parent="android:Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/lip_primary_white_text_color</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/lip_login_textViewCommon_text_size</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="lip_login_labelTextView" parent="lip_login_textViewCommon">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/lip_login_labelTextView_height</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:textColor">@color/lip_label_text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/lip_login_labelTextView_text_size</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="lip_login_labelClickableTextView" parent="lip_login_textViewCommon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/lip_login_labelClickableTextView_height</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:textColor">@color/lip_label_text_color</item>
+        <item name="android:textSize">@dimen/lip_login_labelClickableTextView_text_size</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="lip_login_checkBoxTextView" parent="lip_login_textViewCommon">
+        <item name="android:textSize">@dimen/lip_login_checkBoxTextView_text_size</item>
+        <item name="android:maxLines">3</item>
+    </style>
+
+    <style name="lip_login_descriptionLargeTextView" parent="android:Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/lip_login_descriptionLargeTextView_text_size</item>
+        <item name="android:textColor">@color/lip_primary_white_text_color</item>
+    </style>
+
+    <style name="descriptionSmallTextView" parent="android:Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/descriptionSmallTextView_text_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="lip_confrim_email_desc_textview" parent="android:Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/lip_primary_white_text_color</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/lip_confirm_email_desc_textview_text_size</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="lip_confrim_email" parent="lip_confrim_email_desc_textview">
+        <item name="android:textColor">@color/lip_secondary_green_text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="lip_errorDescTextView" parent="android:Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:textSize">@dimen/lip_login_textViewCommon_text_size</item>
+        <item name="android:textColor">@color/lip_primary_white_text_color</item>
+    </style>
+
+    <style name="lip_errorTitleTextView" parent="lip_errorDescTextView">
+        <item name="android:textSize">@dimen/lip_error_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--  LIP Library text views ends -->
+
+    <!--  LIP Library checkbox starts -->
+    <style name="lip_login_checkBoxCommon" parent="android:Widget.CompoundButton.CheckBox">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:textColor">@color/lip_primary_white_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:button">@null</item>
+        <item name="android:checked">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/lip_checkbox_whiteborder</item>
+    </style>
+    <!--  LIP Library checkbox ends -->
+
+    <!--  LIP Library RadioButton starts -->
+    <style name="lip_login_radioButtonCommon" parent="android:Widget.CompoundButton.RadioButton">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:textColor">@color/lip_primary_white_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:button">@null</item>
+        <item name="android:checked">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/lip_radio_button_selector</item>
+    </style>
+    <!--  LIP Library RadioButton ends -->
+
+    <!--  LIP Library Custom Login Theme -->
+    <style name="lip_login_theme" parent="Theme.AppCompat">
+        <item name="android:windowNoTitle">true</item>
+
+        <!-- Window colors -->
+        <item name="android:windowBackground">@color/lip_window_background</item>
+        <!-- Text colors -->
+        <item name="android:textColorHint">@color/lip_password_hint_color</item>
+
+        <item name="android:textColorHighlight">@android:color/darker_gray</item>
+        <item name="android:textColorLink">@color/lip_primary_white_text_color</item>
+
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColorPrimaryInverse">@android:color/black</item>
+
+        <!--<item name="android:textColor">@color/lip_primary_text_color</item>-->
+
+        <item name="android:textColorSecondary">@color/lip_primary_white_text_color</item>
+        <item name="android:textColorSecondaryInverse">@android:color/black</item>
+
+    </style>
+
+</resources>

@@ -1,0 +1,15 @@
+<resources>
+    <!-- Title bar dimensions -->
+    <dimen name="lip_title_bar_height">64dp</dimen>
+    <dimen name="lip_title_bar_text_size">18sp</dimen>
+
+    <!-- Tablet container dimensions -->
+    <dimen name="lip_tab_container_width">610dp</dimen>
+    <dimen name="lip_tab_container_padding_bottom">0dp</dimen>
+
+    <!-- Selector screen -->
+    <dimen name="lip_selector_buttons_margin">1dp</dimen>
+
+    <!-- SLA screen -->
+    <dimen name="lip_terms_buttons_margin">5dp</dimen>
+</resources>

@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name"> </string>
+    <string name="lip_sign_up_welcome">WELCOME</string>
+    <string name="lip_sign_up_first_name">First Name</string>
+    <string name="lip_sign_up_last_name">Last Name</string>
+    <string name="lip_sign_up_logi_id">Your Logi ID</string>
+    <string name="lip_sign_up_email">Email</string>
+    <string name="lip_sign_up_password">Password</string>
+    <string name="lip_sign_up_password_hint">Minimum 8 characters</string>
+    <string name="lip_sign_up_confirm_password">Confirm Password</string>
+    <string name="lip_sign_up_forgot_password">Forgot Password?</string>
+    <string name="lip_sign_up_need_account">Need A New Account?</string>
+    <string name="lip_sign_up_show_password">Show Password</string>
+
+    <string name="lip_sign_up_already_have_account">Already Have An Account?</string>
+
+    <string name="lip_sign_up_terms_use_privacy_policy">Accept \uFF0D\u0340Terms of Use\uFF0D and \uFF0D\u0341Privacy Policy\uFF0D</string>
+    <string name="lip_sign_up_terms_use">TERMS OF USE</string>
+    <string name="lip_sign_up_privacy_policy">PRIVACY POLICY</string>
+    <string name="lip_sign_up_keep_me_informed">Keep me informed about Logitech\'s special offers, exclusive products and new product information.</string>
+    <string name="lip_sign_up_receive_updates">Receive periodic emails from Logi.</string>
+    <string name="lip_sign_up_forgot_password_instruction">The instructions to reset your password will be sent to your email id.</string>
+    <string name="lip_sign_up_license_agreement_title">License Agreement</string>
+
+    <string name="lip_sign_up_tou_opt_in_desc">Please accept the Terms of Use and Privacy Policy to continue.</string>
+
+    <string name="lip_sign_up_create">Create</string>
+    <string name="lip_sign_up_submit">Submit</string>
+    <string name="lip_sign_up_accept">Accept</string>
+    <string name="lip_sign_up_decline">Decline</string>
+    <string name="lip_sign_up_send_email">SEND EMAIL</string>
+
+
+    <string name="lip_sign_up_google">Google</string>
+    <string name="lip_sign_up_facebook">Facebook</string>
+    <string name="lip_sign_up_logitech_title">Logitech</string>
+
+    <string name="lip_sign_up_connecting_facebook">Connecting to Facebook</string>
+    <string name="lip_sign_up_connecting_google">Connecting to Google</string>
+    <string name="lip_sign_up_connecting_logitech">Connecting to Logitech</string>
+
+    <string name="lip_sign_up_account_create_progress">Creating account</string>
+    <string name="lip_sign_up_account_signin_progress">Signing in</string>
+
+    <string name="lip_sign_up_login">LOGIN</string>
+    <string name="lip_sign_up_forgot_password_title">FORGOT PASSWORD</string>
+    <string name="lip_sign_up_forgot_password_send_email">Attempting to Send email ...</string>
+    <string name="lip_sign_up_forgot_password_email_sent_success">We have sent a password reset email to your email address that you supplied.\n\nPlease check your inbox to continue.</string>
+    <string name="lip_sign_up_create_account">CREATE ACCOUNT</string>
+    <string name="lip_sign_up_facebook_reading_info">Reading profile info..</string>
+
+    <!-- Confirm email screen -->
+    <string name="lip_sign_up_confirm_email">CONFIRM EMAIL</string>
+    <string name="lip_sign_up_confirm_email_instruction">We\'ve sent a verification email to</string>
+    <string name="lip_sign_up_confirm_email_not_received">Please tap the link in the email to confirm your address.\n\nIf you don\'t receive an email within the next 5 minutes, please check your junk folder or tap on resend button below.</string>
+    <string name="lip_sign_up_resend_email">RESEND</string>
+    <string name="lip_sign_up_verify_email">Verify later</string>
+
+
+    <string name="lip_sign_up_error_toast_no_network">Connection Failed. Please check your Internet connection and try again.</string>
+    <string name="lip_sign_up_error_toast_timeout">Request Timed out. Please try again.</string>
+    <string name="lip_sign_up_error_toast_no_email_access_facebook">Email permission disabled.\nIn your Facebook account, go to Settings > Apps and delete this app and try again.</string>
+    <string name="lip_sign_up_error_toast_no_email_facebook">Email address required.\nPlease connect to Facebook using your email address.</string>
+    <string name="lip_sign_up_error_toast_email_exists">This email is already registered. Please try a different email address or you may use Facebook or Google.</string>
+    <string name="lip_sign_up_error_toast_accept_conditions">Please accept the Terms of Use and Privacy Policy</string>
+    <!--<string name="lip_sign_up_error_toast_enter_email_pass">Please enter email address/password</string>-->
+    <string name="lip_sign_up_error_toast_min_count_pwd">Password length must be at least 8 characters.</string>
+    <string name="lip_sign_up_error_toast_max_count_pwd">Password length must not be more than 100 characters.</string>
+    <string name="lip_sign_up_error_toast_enter_pass">Please enter a password</string>
+    <string name="lip_sign_up_error_toast_invalid_email">Please enter a valid email address.</string>
+    <!--<string name="lip_sign_up_error_toast_name_missing">Please enter first name and last name</string>-->
+    <string name="lip_sign_up_error_toast_first_name_missing">Please enter first name.</string>
+    <string name="lip_sign_up_error_toast_last_name_missing">Please enter last name.</string>
+    <string name="lip_sign_up_error_toast_internal_error">Something went wrong. Please try again after some time.</string>
+    <string name="lip_sign_up_error_toast_cancel_error">User Cancelled</string>
+    <string name="lip_sign_up_error_toast_account_locked">Your account has been locked due to multiple login attempts with an incorrect password. Please try again in 30 minutes.</string>
+    <string name="lip_sign_up_error_toast_incorrect_cred">Incorrect email address or password. If you previously used Facebook or Google use that again now, else reset your password.</string>
+    <string name="lip_sign_up_error_toast_no_email">Incorrect email address. Enter a valid email address or you may use Facebook or Google to log into your account.</string>
+    <string name="lip_sign_up_error_input_invalid">Invalid input</string>
+    <string name="lip_sign_up_with">SIGN UP WITH:</string>
+    <string name="lip_login_with">LOG IN WITH:</string>
+    <string name="lip_sign_up_create_id">CREATE LOGI ID</string>
+    <string name="lip_sign_up_continue">CONTINUE</string>
+
+    <string name="lip_sign_up_access_denied">ACCESS DENIED</string>
+
+    <string name="lip_sign_up_password_reset">Password Reset</string>
+    <string name="lip_error_ok">OK</string>
+    <string name="lip_signin_error_password_deleted">Thanks for logging in using %s. We recommend you to access your account the same way.\n\nFor security reasons, your current password has been removed from the system. You may generate a new password from your account settings or from the email that has been sent to you. </string>
+
+</resources>

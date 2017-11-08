@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lip_frag_sign_in_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lip_window_background">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/lip_titlebar_layout"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/lip_tab_container"
+        android:layout_width="@dimen/lip_tab_container_width"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="@dimen/lip_tab_container_padding_bottom">
+
+        <com.logitech.lip.ui.common.CustomTextView
+            android:id="@+id/lip_error_title"
+            style="@style/lip_errorTitleTextView"
+            android:visibility="gone" />
+
+        <com.logitech.lip.ui.common.CustomTextView
+            android:id="@+id/lip_error_desc"
+            style="@style/lip_errorDescTextView"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_below="@+id/lip_error_title"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/errorButtonLayput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <com.logitech.lip.ui.common.CustomButton
+                android:id="@+id/lip_error_positive"
+                style="@style/lip_primary_white_button"
+                android:layout_weight="1"
+                android:visibility="gone" />
+
+            <com.logitech.lip.ui.common.CustomButton
+                android:id="@+id/lip_error_negative"
+                style="@style/lip_secondary_green_button"
+                android:layout_weight="1"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1096475713939",
+    "project_id": "lipsdk-1332"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1096475713939:android:609d8613d932cfe2",
+        "android_client_info": {
+          "package_name": "com.logitech.lip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1096475713939-7cadr76alfegnuvhjo4rr4lqpg90h8pm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.logitech.lip",
+            "certificate_hash": "1F697B8042D9B68BF697204306779512614CF5BE"
+          }
+        },
+        {
+          "client_id": "1096475713939-osifr287f9j6kl5l8gl8g45mpa1u7nub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD98E84HrVJo6kzuJSqLbPa5z3uqIOGfN8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

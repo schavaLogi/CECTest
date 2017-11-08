@@ -1,0 +1,44 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.logitech.lip">
+
+    <uses-sdk tools:overrideLibrary="android.support.customtabs, com.facebook"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--<uses-permission android:name="android.permission.GET_ACCOUNTS"/>-->
+
+    <!--<uses-permission android:name="android.permission.READ_CONTACTS"/>-->
+
+    <!--&lt;!&ndash; Read profile is required for below 23 API Level for reading Me profile &ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.READ_PROFILE" android:maxSdkVersion="22"/>-->
+    
+    <application>
+
+
+        <activity android:name=".ui.login.LoginSelectorActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:alwaysRetainTaskState="true"
+            android:theme="@style/lip_login_theme"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity android:name=".ui.login.LoginSelectorTabletActivity"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask"
+            android:alwaysRetainTaskState="true"
+            android:theme="@style/lip_login_theme"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity tools:replace="android:theme" android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name"/>
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
+    </application>
+
+</manifest>

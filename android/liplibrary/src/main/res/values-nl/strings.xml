@@ -1,0 +1,90 @@
+<resources>
+    <string name="lip_sign_up_welcome">WELKOM</string>
+    <string name="lip_sign_up_first_name">Voornaam</string>
+    <string name="lip_sign_up_last_name">Achternaam</string>
+    <string name="lip_sign_up_logi_id">Uw Logi-ID</string>
+    <string name="lip_sign_up_email">E-mail</string>
+    <string name="lip_sign_up_password">Wachtwoord</string>
+    <string name="lip_sign_up_password_hint">Ten minste 8 tekens</string>
+    <string name="lip_sign_up_confirm_password">Wachtwoord bevestigen</string>
+    <string name="lip_sign_up_forgot_password">Wachtwoord vergeten?</string>
+    <string name="lip_sign_up_need_account">Nieuwe account nodig?</string>
+    <string name="lip_sign_up_show_password">Wachtwoord weergeven</string>
+
+    <string name="lip_sign_up_already_have_account">Heeft u al een account?</string>
+
+    <string name="lip_sign_up_terms_use_privacy_policy">Ga akkoord met de \uFF0D\u0340Gebruiksvoorwaarden\uFF0D en het \uFF0D\u0341Privacybeleid\uFF0D.</string>
+    <string name="lip_sign_up_terms_use">GEBRUIKSVOORWAARDEN</string>
+    <string name="lip_sign_up_privacy_policy">PRIVACYBELEID</string>
+    <string name="lip_sign_up_keep_me_informed">Houd mij op de hoogte van speciale Logitech-aanbiedingen, exclusieve producten en nieuwe productinformatie.</string>
+    <string name="lip_sign_up_receive_updates">Ontvang regelmatig e-mails van Logi.</string>
+    <string name="lip_sign_up_forgot_password_instruction">De instructies om uw wachtwoord opnieuw in te stellen worden naar uw e-mail-id verzonden.</string>
+    <string name="lip_sign_up_license_agreement_title">Licentieovereenkomst</string>
+
+    <string name="lip_sign_up_tou_opt_in_desc">Ga akkoord met de Gebruiksvoorwaarden en het Privacybeleid om door te gaan.</string>
+
+    <string name="lip_sign_up_create">Maken</string>
+    <string name="lip_sign_up_submit">Verzenden</string>
+    <string name="lip_sign_up_accept">Accepteren</string>
+    <string name="lip_sign_up_decline">Weigeren</string>
+    <string name="lip_sign_up_send_email">E-MAIL VERZENDEN</string>
+
+
+    <string name="lip_sign_up_google">Google</string>
+    <string name="lip_sign_up_facebook">Facebook</string>
+    <string name="lip_sign_up_logitech_title">Logitech</string>
+
+    <string name="lip_sign_up_connecting_facebook">Verbinding maken met Facebook</string>
+    <string name="lip_sign_up_connecting_google">Verbinding maken met Google</string>
+    <string name="lip_sign_up_connecting_logitech">Verbinden maken met Logitech</string>
+
+    <string name="lip_sign_up_account_create_progress">Account maken</string>
+    <string name="lip_sign_up_account_signin_progress">Aanmelden</string>
+
+    <string name="lip_sign_up_login">AANMELDEN</string>
+    <string name="lip_sign_up_forgot_password_title">WACHTWOORD VERGETEN</string>
+    <string name="lip_sign_up_forgot_password_send_email">Poging tot e-mail verzenden...</string>
+    <string name="lip_sign_up_forgot_password_email_sent_success">We hebben een wachtwoord reset e-mail verzonden naar uw e-mailadres dat u hebt opgegeven.\n\nControleer uw Postvak IN om verder te gaan.</string>
+    <string name="lip_sign_up_create_account">ACCOUNT AANMAKEN</string>
+    <string name="lip_sign_up_facebook_reading_info">Profielgegevens lezen...</string>
+
+    <!-- Confirm email screen -->
+    <string name="lip_sign_up_confirm_email">E-MAIL BEVESTIGEN</string>
+    <string name="lip_sign_up_confirm_email_instruction">We hebben een bevestigingsbericht verzonden naar</string>
+    <string name="lip_sign_up_confirm_email_not_received">Tik op de link in de e-mail om uw adres te bevestigen.\n\nAls u binnen vijf minuten geen e-mail ontvangt, controleer dan uw spammap of tik hieronder op de knop Opnieuw verzenden.</string>
+    <string name="lip_sign_up_resend_email">OPNIEUW VERZENDEN</string>
+    <string name="lip_sign_up_verify_email">Later bevestigen</string>
+
+
+    <string name="lip_sign_up_error_toast_no_network">Verbinding mislukt. Controleer uw internetverbinding en probeer het opnieuw.</string>
+    <string name="lip_sign_up_error_toast_timeout">Time-out van verzoek. Probeer het opnieuw.</string>
+    <string name="lip_sign_up_error_toast_no_email_access_facebook">E-mailmachtiging uitgeschakeld.\nGa naar Instellingen &gt; Toepassingen in uw Facebook-account, verwijder deze app en probeer het opnieuw.</string>
+    <string name="lip_sign_up_error_toast_no_email_facebook">E-mailadres vereist.\nMaak verbinding met Facebook via uw e-mailadres.</string>
+    <string name="lip_sign_up_error_toast_email_exists">Dit e-mailadres is al geregistreerd. Probeer het opnieuw met een ander e-mailadres of gebruik Facebook of Google.</string>
+    <string name="lip_sign_up_error_toast_accept_conditions">Ga akkoord met de Gebruiksvoorwaarden en het Privacybeleid.</string>
+    <!--<string name="lip_sign_up_error_toast_enter_email_pass">Please enter email address/password</string>-->
+    <string name="lip_sign_up_error_toast_min_count_pwd">Het wachtwoord moet ten minste 8 tekens lang zijn.</string>
+    <string name="lip_sign_up_error_toast_max_count_pwd">Het wachtwoord mag niet langer zijn dan 100 tekens.</string>
+    <string name="lip_sign_up_error_toast_enter_pass">Voer een wachtwoord in</string>
+    <string name="lip_sign_up_error_toast_invalid_email">Voer een geldig e-mailadres in.</string>
+    <!--<string name="lip_sign_up_error_toast_name_missing">Please enter first name and last name</string>-->
+    <string name="lip_sign_up_error_toast_first_name_missing">Voer uw voornaam in.</string>
+    <string name="lip_sign_up_error_toast_last_name_missing">Voor uw achternaam in.</string>
+    <string name="lip_sign_up_error_toast_internal_error">Er is iets fout gegaan. Probeer het over enkele ogenblikken opnieuw.</string>
+    <string name="lip_sign_up_error_toast_cancel_error">Gebruiker geannuleerd</string>
+    <string name="lip_sign_up_error_toast_account_locked">Uw account is geblokkeerd omdat er meerdere aanmeldpogingen met een verkeerd wachtwoord zijn gedaan. Probeer het over 30 minuten opnieuw.</string>
+    <string name="lip_sign_up_error_toast_incorrect_cred">Verkeerd e-mailadres of wachtwoord. Als u Facebook of Google eerder heeft gebruikt, gebruikt u het opnieuw. Anders stelt u uw wachtwoord opnieuw in.</string>
+    <string name="lip_sign_up_error_toast_no_email">Verkeerd e-mailadres. Voer een geldig e-mailadres in of gebruik Facebook of Google om u aan te melden bij uw account.</string>
+    <string name="lip_sign_up_error_input_invalid">Ongeldige invoer</string>
+    <string name="lip_sign_up_with">REGISTREREN MET:</string>
+    <string name="lip_login_with">AANMELDEN MET:</string>
+    <string name="lip_sign_up_create_id">LOGI-ID AANMAKEN</string>
+    <string name="lip_sign_up_continue">DOORGAAN</string>
+
+    <string name="lip_sign_up_access_denied">TOEGANG GEWEIGERD</string>
+
+    <string name="lip_sign_up_password_reset">Wachtwoord opnieuw instellen</string>
+    <string name="lip_error_ok">OK</string>
+    <string name="lip_signin_error_password_deleted">Hartelijk dank dat u zich heeft aangemeld met %s. Het is raadzaam uw account op dezelfde manier te openen.\n\nUit veiligheidsoverwegingen is uw huidige wachtwoord van het systeem verwijderd. U kunt een nieuw wachtwoord genereren via uw accountinstellingen of de e-mail die naar u is verzonden. </string>
+
+</resources>

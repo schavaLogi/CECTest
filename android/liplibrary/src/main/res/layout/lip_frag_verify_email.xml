@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/lip_titlebar_layout"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/sign_up_verify_desc_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sign_up_resend_email"
+        android:layout_below="@id/header"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="24dp">
+
+        <com.logitech.lip.ui.common.CustomTextView
+            android:id="@+id/sign_up_verify_desc"
+            style="@style/lip_confrim_email_desc_textview"
+            android:text="@string/lip_sign_up_confirm_email_instruction" />
+
+        <com.logitech.lip.ui.common.CustomTextView
+            android:id="@+id/sign_up_verify_email"
+            style="@style/lip_confrim_email"
+            android:layout_below="@id/sign_up_verify_desc"
+            android:gravity="center_horizontal" />
+
+        <com.logitech.lip.ui.common.CustomTextView
+            android:id="@+id/sign_up_verify_desc_detailed"
+            style="@style/lip_confrim_email_desc_textview"
+            android:layout_below="@id/sign_up_verify_email"
+            android:text="@string/lip_sign_up_confirm_email_not_received" />
+    </RelativeLayout>
+
+    <com.logitech.lip.ui.common.CustomButton
+        android:id="@+id/sign_up_resend_email"
+        style="@style/lip_primary_white_button"
+        android:layout_above="@+id/sign_up_verify_later"
+        android:text="@string/lip_sign_up_resend_email"
+        android:layout_alignWithParentIfMissing="true"/>
+
+    <com.logitech.lip.ui.common.CustomButton
+        android:id="@+id/sign_up_verify_later"
+        style="@style/lip_secondary_green_button"
+        android:layout_alignParentBottom="true"
+        android:text="@string/lip_sign_up_verify_email"
+        android:visibility="gone"/>
+
+</RelativeLayout>

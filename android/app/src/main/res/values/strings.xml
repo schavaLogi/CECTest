@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CECTest</string>
+    <string name="androidDeploymentKey">cLpDI5kX8y3ZyJPRnAmlVbZWUoKF6f649b19-1890-4f5d-bc47-204ddce4effd</string>
+
+
+
+
+    <string name="logitech_app_id">ee10d1b6-d851-464c-8c80-6666522cde1d</string>
+    <string name="facebook_app_id">1585823481684405</string>
+    <string name="server_client_id">"1043615952486-abato5q05h672jbk3s3rhcngro79o2s0.apps.googleusercontent.com"</string>
+
+    <string name="lip_signup_tou_url" translatable="false">https://files.myharmony.com/Assets/legal/en/termsofuse.html</string>
+    <string name="lip_signup_privacy_policy_url" translatable="false">https://files.myharmony.com/Assets/legal/en/privacypolicy.html</string>
+
+
+</resources>

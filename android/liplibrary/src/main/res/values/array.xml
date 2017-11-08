@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Client Specific : has to override below 3 strings in their resources Start -->
+    <string name="logitech_app_id" translatable="false" >ee10d1b6-d851-464c-8c80-6666522cde1d</string>
+    <string name="facebook_app_id" translatable="false" >1585823481684405</string>
+    <string name="server_client_id" translatable="false" >"582001493682-o2o5tkv5bsvmlutk1sc79j1dk7f7ij7c.apps.googleusercontent.com"</string>
+    <!-- Client Specific  End-->
+
+    <!-- TOU & OPT accepted not required any translation -->
+    <string name="tou_accepted" translatable="false">_tou_accepted</string>
+    <string name="optin_accepted" translatable="false">_optin_accepted</string>
+</resources>
