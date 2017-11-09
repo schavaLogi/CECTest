@@ -5,7 +5,7 @@ import {addNavigationHelpers, NavigationActions} from 'react-navigation';
 import Root from './Root';
 import {updateNetStatus} from './actions/network';
 
-class AppNavigator extends React.Component {
+export class AppNavigator extends React.Component {
 
     shouldCloseApp = nav => {
         if (nav.index > 0) return false;

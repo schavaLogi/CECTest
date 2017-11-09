@@ -37,10 +37,10 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new ReactNativeLocalizationPackage(),
             new VectorIconsPackage(),
             new RNSendIntentPackage(),
             new BleManagerPackage(),
-            new ReactNativeLocalizationPackage(),
             new CodePush("ELm2xK2uR0avLYjsA80QOSPvO_Sd6f649b19-1890-4f5d-bc47-204ddce4effd",
             getApplicationContext(), BuildConfig.DEBUG),
             new LipPackage()
