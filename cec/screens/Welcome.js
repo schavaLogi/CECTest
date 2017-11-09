@@ -14,7 +14,7 @@ import SendIntentAndroid from 'react-native-send-intent'
 import locStrings from '../../localization';
 import commonStyles from '../styles';
 
-class WelcomeScreen extends React.Component {
+export class WelcomeScreen extends React.Component {
 
     constructor(props) {
         super(props);

@@ -1,7 +1,7 @@
 import {ADD_CEC_DEVICES, UPDATE_CEC_DEVICE} from '../actions/cecDevices';
 import {CEC_DEVICES} from "../cec/model/mockCecDevices";
 
-const initialCECDevices = CEC_DEVICES;
+export const initialCECDevices = CEC_DEVICES;
 
 function cecDevices(state = initialCECDevices, action) {
     switch (action.type) {

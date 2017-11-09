@@ -15,7 +15,7 @@ import commonStyles from '../styles';
 import {enableBTWithPermission} from '../util/BTUtils';
 import {updateUserInfoStatus} from '../../actions/user';
 
-class MeProfileScreen extends React.Component {
+export class MeProfileScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
