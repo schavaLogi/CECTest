@@ -1,7 +1,7 @@
 import 'react-native';
 import React from 'react';
-import MeProfile , {MeProfileScreen} from '../cec/screens/MeProfile'
-import locStrings from '../localization';
+import MeProfile , {MeProfileScreen} from '../MeProfile'
+import locStrings from '../../../localization';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
@@ -17,7 +17,7 @@ const middlewares = []; // you can mock any middlewares here if necessary
 const mockStore = configureStore(middlewares);
 const initialState = {
     nav : {},
-    navigation : {},
+    navigation : {navigate : jest.fn()},
     user : {firstName: '', lastName: ''}
 };
 

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders as expected 1`] = `
+exports[`renders App as expected 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -54,7 +54,7 @@ ShallowWrapper {
 }
 `;
 
-exports[`renders correctly 1`] = `
+exports[`renders App correctly 1`] = `
 <View
   onLayout={[Function]}
   style={

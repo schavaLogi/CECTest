@@ -8,14 +8,14 @@ import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
 
 
-it('renders correctly', () => {
+it('renders App correctly', () => {
   const tree = renderer.create(
     <App />
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
-it('renders as expected', () => {
+it('renders App as expected', () => {
     const wrapper = shallow(
         <App />
     );
