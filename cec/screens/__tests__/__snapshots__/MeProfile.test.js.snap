@@ -6,7 +6,12 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MeProfileScreen
     dispatch={[Function]}
-    navigation={Object {}}
+    navigation={
+      Object {
+        "dispatch": [Function],
+        "navigate": [Function],
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -1111,7 +1116,7 @@ ShallowWrapper {
 }
 `;
 
-exports[`MeProfileScreen Testing Render MeProfileScreen 1`] = `
+exports[`MeProfileScreen Testing renders MeProfileScreen as expected 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],

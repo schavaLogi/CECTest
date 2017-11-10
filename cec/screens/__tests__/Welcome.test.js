@@ -1,20 +1,18 @@
 import 'react-native';
 import React from 'react';
-import Welcome , {WelcomeScreen} from '../Welcome'
-
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
-
 // Mock store
 import configureStore from 'redux-mock-store';
-import { shallow, configure } from 'enzyme';
+import {configure, shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-configure({ adapter: new Adapter() });
-
+import Welcome, {WelcomeScreen} from '../Welcome'
+// Note: test renderer must be required after react-native.
 // UI Dependency
 import {Button, Icon, Text} from "native-base";
 import locStrings from "../../../localization";
-import * as sinon from "sinon";
+import sinon from "sinon";
+
+configure({ adapter: new Adapter() });
+
 
 const middlewares = []; // you can mock any middlewares here if necessary
 const mockStore = configureStore(middlewares);
@@ -26,9 +24,11 @@ const initialState = {
 describe('WelcomeScreen Testing', () => {
     let wrapper;
     let spy;
+
+
     const props = {
         nav: {routes: [{routeName: 'Welcome', key : 'id_1eqweqwe'}], index : 0},
-        navigation : {navigate : jest.fn()},
+        navigation : {navigate : jest.fn() , dispatch: jest.fn()},
         isConnected : true
     };
 
@@ -49,35 +49,49 @@ describe('WelcomeScreen Testing', () => {
     it('Check Welcome screen content Text with 2 Buttons', () =>{
         const render = wrapper.dive();
 
+        // Check Rendered View count (Button, Text, Icon)
         expect(wrapper.find(Button).length).toBe(2);
-
         expect(wrapper.find(Text).length).toBe(2);
-
-        const displayText = wrapper.find(Text).get(0).props.children;
-
-        expect(displayText).toEqual(locStrings.welcome_desc);
-
-
         expect(wrapper.find(Icon).length).toBe(1);
 
-        for (var prop in render.find(Icon).props()) {
-            console.log(prop);
-        }
 
+        //Check Welcome text description
+        const displayText = wrapper.find(Text).get(0).props.children;
+        expect(displayText).toEqual(locStrings.welcome_desc);
+
+        // Check Icon name property
         expect(render.find(Icon).props().name).toEqual('settings');
+
+        /*for (var prop in render.find(Icon).props()) {
+            console.log(prop);
+        }*/
     });
 
 
-    it('renders WelcomeScreen as expected after alter state', () => {
+    it('Click on Next Button when not Connected state', () => {
         wrapper.setProps({...props, isConnected : false});
         const render = wrapper.dive();
 
-        expect(spy.calledOnce).toBe(true);
-
         render.find(Button).forEach(child => {
-            child.simulate('click');
+            child.simulate('press');
         });
     });
+
+
+    it('Click on Next Button with Connected state', () => {
+        wrapper.setProps({...props, isConnected : true});
+        const render = wrapper.dive();
+
+        render.find(Button).forEach(child => {
+            child.simulate('press');
+        });
+    });
+
+    it('Check Lifecycle Api triggered when props changes', () =>{
+        wrapper.setProps({...props, isConnected : false});
+        const render = wrapper.dive();
+        expect(spy.calledOnce).toBe(true);
+    })
 });
 
 
