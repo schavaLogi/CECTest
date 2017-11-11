@@ -44,6 +44,7 @@ describe('MeProfileScreen Testing', () => {
             { context: { store: mockStore(initialState) } },
         );
         expect(wrapper.dive()).toMatchSnapshot();
+
     });
 
     it('check state is matched to Default state ', () => {
@@ -84,6 +85,8 @@ describe('MeProfileScreen Testing', () => {
         expect(wrapper.find(Input).get(0).props.value).toEqual(newTextValue);
 
         expect(wrapper.state()).toEqual(modifiedState);
+
+        expect(wrapper.dive()).toMatchSnapshot();
     });
 
     it('check the Next button is enabled after Enter Input Fields', () => {

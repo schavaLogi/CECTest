@@ -223,7 +223,7 @@ Array [
       "type": "TV",
     },
     "id": 101,
-    "type": "ADD_CEC_DEVICES",
+    "type": "UPDATE_CEC_DEVICE",
   },
 ]
 `;

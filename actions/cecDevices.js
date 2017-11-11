@@ -10,7 +10,7 @@ export function addCECDevice(devices) {
 
 export function updateCECDevice(id, device) {
     return {
-        type: ADD_CEC_DEVICES,
+        type: UPDATE_CEC_DEVICE,
         id: id,
         device: device
     }
