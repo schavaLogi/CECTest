@@ -11,7 +11,7 @@ import commonStyles from "../styles/index";
 import {connect} from "react-redux";
 
 
-class ExpandableListScreen extends Component {
+export class ExpandableListScreen extends Component {
 
     constructor(props) {
         super(props);
@@ -124,6 +124,9 @@ class ExpandableListScreen extends Component {
 ExpandableListScreen.propTypes = {
     cecDevices: PropTypes.array.isRequired,
     dispatch: PropTypes.func.isRequired,
+
+    /* navigation passed to every screen by framework it self
+     (when we use screen in Route ex:{screen: WelcomeScreen}) */
     navigation: PropTypes.object.isRequired,
 };
 

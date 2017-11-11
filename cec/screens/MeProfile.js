@@ -22,9 +22,6 @@ export class MeProfileScreen extends React.Component {
             firstName: '',
             lastName: ''
         };
-
-        this.focusNextField = this.focusNextField.bind(this);
-        this.inputs = {};
     }
 
     componentWillUnmount() {
@@ -32,10 +29,6 @@ export class MeProfileScreen extends React.Component {
     }
 
     componentDidMount() {
-    }
-
-    focusNextField(id) {
-        this.inputs[id].focus();
     }
 
     async onNextButton() {
@@ -71,13 +64,9 @@ export class MeProfileScreen extends React.Component {
                             <Label>{locStrings.first_name}</Label>
 
                             <Input
-                                getRef={(input) => this.inputs['firstName'] = input}
-                                autoCapitalize='words'
+                                  autoCapitalize='words'
                                 onChangeText={(text) => this.setState({firstName: text})}
                                 blurOnSubmit={false}
-                                onSubmitEditing={() => {
-                                    this.focusNextField('lastName');
-                                }}
                                 value={this.state.firstName}
                                 autoFocus={true}
                                 maxLength={20}
@@ -91,7 +80,6 @@ export class MeProfileScreen extends React.Component {
                             <Label>{locStrings.last_name}</Label>
 
                             <Input
-                                getRef={(input) => this.inputs['lastName'] = input}
                                 autoCapitalize='words'
                                 onChangeText={(text) => this.setState({lastName: text})}
                                 blurOnSubmit={true}

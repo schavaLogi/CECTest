@@ -10,6 +10,8 @@ import Adapter from 'enzyme-adapter-react-16';
 import MeProfile , {MeProfileScreen} from '../MeProfile'
 import locStrings from '../../../localization';
 
+import sinon from 'sinon';
+
 
 configure({ adapter: new Adapter() });
 const middlewares = []; // you can mock any middlewares here if necessary
@@ -118,6 +120,14 @@ describe('MeProfileScreen Testing', () => {
             child.simulate('changeText', newTextValue);
         });
         expect(wrapper.state()).toEqual(modifiedState);
+    })
+
+    it('Check component unmounted successfully', ()=> {
+        const spy = sinon.spy(MeProfileScreen.prototype, 'componentWillUnmount');
+        expect(spy.calledOnce).toBe(false);
+        wrapper.unmount();
+        expect(spy.calledOnce).toBe(true);
+        spy.restore();
     })
 });
 

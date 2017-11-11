@@ -39,7 +39,6 @@ export class WelcomeScreen extends React.Component {
 
         // Check we are active screen or not
         if (currentRoute.routeName !== 'Welcome') return false;
-        console.log("currentRoute =" + currentRoute.routeName + "key =" + currentRoute.key);
 
         return this.props.isConnected !== nextProps.isConnected;
     }
@@ -60,15 +59,9 @@ export class WelcomeScreen extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState, prevContext) {
-        console.log("WelcomeScreen componentDidUpdate" + prevProps + prevState + prevContext);
-
         if (!this.props.isConnected) {
             this.showAlertDialog();
         }
-    }
-
-    componentWillUnmount() {
-        console.log("WelcomeScreen componentWillUnmount");
     }
 
     async onNextButtonClick() {
@@ -92,7 +85,6 @@ export class WelcomeScreen extends React.Component {
     }
 
     render() {
-        console.log("WelcomeScreen render");
         return (
             <Container style={commonStyles.container}>
                 <Header>
@@ -129,9 +121,7 @@ export class WelcomeScreen extends React.Component {
                         <Text>{locStrings.next}</Text>
                     </Button>
 
-                    <View style={welcomeStyles.bottom}>
-
-                    </View>
+                    <View style={welcomeStyles.bottom}/>
 
                 </Content>
             </Container>

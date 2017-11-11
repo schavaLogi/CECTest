@@ -82,10 +82,8 @@ ShallowWrapper {
                 autoCapitalize="words"
                 autoFocus={true}
                 blurOnSubmit={false}
-                getRef={[Function]}
                 maxLength={20}
                 onChangeText={[Function]}
-                onSubmitEditing={[Function]}
                 placeholder="Minimum 4 characters"
                 placeholderTextColor="gray"
                 returnKeyType="next"
@@ -106,7 +104,6 @@ ShallowWrapper {
               <Styled(Input)
                 autoCapitalize="words"
                 blurOnSubmit={true}
-                getRef={[Function]}
                 maxLength={20}
                 onChangeText={[Function]}
                 placeholder="Minimum 4 characters"
@@ -232,10 +229,8 @@ ShallowWrapper {
                   autoCapitalize="words"
                   autoFocus={true}
                   blurOnSubmit={false}
-                  getRef={[Function]}
                   maxLength={20}
                   onChangeText={[Function]}
-                  onSubmitEditing={[Function]}
                   placeholder="Minimum 4 characters"
                   placeholderTextColor="gray"
                   returnKeyType="next"
@@ -256,7 +251,6 @@ ShallowWrapper {
                 <Styled(Input)
                   autoCapitalize="words"
                   blurOnSubmit={true}
-                  getRef={[Function]}
                   maxLength={20}
                   onChangeText={[Function]}
                   placeholder="Minimum 4 characters"
@@ -325,10 +319,8 @@ ShallowWrapper {
                     autoCapitalize="words"
                     autoFocus={true}
                     blurOnSubmit={false}
-                    getRef={[Function]}
                     maxLength={20}
                     onChangeText={[Function]}
-                    onSubmitEditing={[Function]}
                     placeholder="Minimum 4 characters"
                     placeholderTextColor="gray"
                     returnKeyType="next"
@@ -349,7 +341,6 @@ ShallowWrapper {
                   <Styled(Input)
                     autoCapitalize="words"
                     blurOnSubmit={true}
-                    getRef={[Function]}
                     maxLength={20}
                     onChangeText={[Function]}
                     placeholder="Minimum 4 characters"
@@ -379,10 +370,8 @@ ShallowWrapper {
                       autoCapitalize="words"
                       autoFocus={true}
                       blurOnSubmit={false}
-                      getRef={[Function]}
                       maxLength={20}
                       onChangeText={[Function]}
-                      onSubmitEditing={[Function]}
                       placeholder="Minimum 4 characters"
                       placeholderTextColor="gray"
                       returnKeyType="next"
@@ -415,10 +404,8 @@ ShallowWrapper {
                       "autoCapitalize": "words",
                       "autoFocus": true,
                       "blurOnSubmit": false,
-                      "getRef": [Function],
                       "maxLength": 20,
                       "onChangeText": [Function],
-                      "onSubmitEditing": [Function],
                       "placeholder": "Minimum 4 characters",
                       "placeholderTextColor": "gray",
                       "returnKeyType": "next",
@@ -446,7 +433,6 @@ ShallowWrapper {
                     <Styled(Input)
                       autoCapitalize="words"
                       blurOnSubmit={true}
-                      getRef={[Function]}
                       maxLength={20}
                       onChangeText={[Function]}
                       placeholder="Minimum 4 characters"
@@ -481,7 +467,6 @@ ShallowWrapper {
                     "props": Object {
                       "autoCapitalize": "words",
                       "blurOnSubmit": true,
-                      "getRef": [Function],
                       "maxLength": 20,
                       "onChangeText": [Function],
                       "placeholder": "Minimum 4 characters",
@@ -620,10 +605,8 @@ ShallowWrapper {
                   autoCapitalize="words"
                   autoFocus={true}
                   blurOnSubmit={false}
-                  getRef={[Function]}
                   maxLength={20}
                   onChangeText={[Function]}
-                  onSubmitEditing={[Function]}
                   placeholder="Minimum 4 characters"
                   placeholderTextColor="gray"
                   returnKeyType="next"
@@ -644,7 +627,6 @@ ShallowWrapper {
                 <Styled(Input)
                   autoCapitalize="words"
                   blurOnSubmit={true}
-                  getRef={[Function]}
                   maxLength={20}
                   onChangeText={[Function]}
                   placeholder="Minimum 4 characters"
@@ -770,10 +752,8 @@ ShallowWrapper {
                     autoCapitalize="words"
                     autoFocus={true}
                     blurOnSubmit={false}
-                    getRef={[Function]}
                     maxLength={20}
                     onChangeText={[Function]}
-                    onSubmitEditing={[Function]}
                     placeholder="Minimum 4 characters"
                     placeholderTextColor="gray"
                     returnKeyType="next"
@@ -794,7 +774,6 @@ ShallowWrapper {
                   <Styled(Input)
                     autoCapitalize="words"
                     blurOnSubmit={true}
-                    getRef={[Function]}
                     maxLength={20}
                     onChangeText={[Function]}
                     placeholder="Minimum 4 characters"
@@ -863,10 +842,8 @@ ShallowWrapper {
                       autoCapitalize="words"
                       autoFocus={true}
                       blurOnSubmit={false}
-                      getRef={[Function]}
                       maxLength={20}
                       onChangeText={[Function]}
-                      onSubmitEditing={[Function]}
                       placeholder="Minimum 4 characters"
                       placeholderTextColor="gray"
                       returnKeyType="next"
@@ -887,7 +864,6 @@ ShallowWrapper {
                     <Styled(Input)
                       autoCapitalize="words"
                       blurOnSubmit={true}
-                      getRef={[Function]}
                       maxLength={20}
                       onChangeText={[Function]}
                       placeholder="Minimum 4 characters"
@@ -917,10 +893,8 @@ ShallowWrapper {
                         autoCapitalize="words"
                         autoFocus={true}
                         blurOnSubmit={false}
-                        getRef={[Function]}
                         maxLength={20}
                         onChangeText={[Function]}
-                        onSubmitEditing={[Function]}
                         placeholder="Minimum 4 characters"
                         placeholderTextColor="gray"
                         returnKeyType="next"
@@ -953,10 +927,8 @@ ShallowWrapper {
                         "autoCapitalize": "words",
                         "autoFocus": true,
                         "blurOnSubmit": false,
-                        "getRef": [Function],
                         "maxLength": 20,
                         "onChangeText": [Function],
-                        "onSubmitEditing": [Function],
                         "placeholder": "Minimum 4 characters",
                         "placeholderTextColor": "gray",
                         "returnKeyType": "next",
@@ -984,7 +956,6 @@ ShallowWrapper {
                       <Styled(Input)
                         autoCapitalize="words"
                         blurOnSubmit={true}
-                        getRef={[Function]}
                         maxLength={20}
                         onChangeText={[Function]}
                         placeholder="Minimum 4 characters"
@@ -1019,7 +990,6 @@ ShallowWrapper {
                       "props": Object {
                         "autoCapitalize": "words",
                         "blurOnSubmit": true,
-                        "getRef": [Function],
                         "maxLength": 20,
                         "onChangeText": [Function],
                         "placeholder": "Minimum 4 characters",
@@ -1185,10 +1155,8 @@ ShallowWrapper {
             autoCapitalize="words"
             autoFocus={true}
             blurOnSubmit={false}
-            getRef={[Function]}
             maxLength={20}
             onChangeText={[Function]}
-            onSubmitEditing={[Function]}
             placeholder="Minimum 4 characters"
             placeholderTextColor="gray"
             returnKeyType="next"
@@ -1209,7 +1177,6 @@ ShallowWrapper {
           <Styled(Input)
             autoCapitalize="words"
             blurOnSubmit={true}
-            getRef={[Function]}
             maxLength={20}
             onChangeText={[Function]}
             placeholder="Minimum 4 characters"
@@ -1305,10 +1272,8 @@ ShallowWrapper {
                 autoCapitalize="words"
                 autoFocus={true}
                 blurOnSubmit={false}
-                getRef={[Function]}
                 maxLength={20}
                 onChangeText={[Function]}
-                onSubmitEditing={[Function]}
                 placeholder="Minimum 4 characters"
                 placeholderTextColor="gray"
                 returnKeyType="next"
@@ -1329,7 +1294,6 @@ ShallowWrapper {
               <Styled(Input)
                 autoCapitalize="words"
                 blurOnSubmit={true}
-                getRef={[Function]}
                 maxLength={20}
                 onChangeText={[Function]}
                 placeholder="Minimum 4 characters"
@@ -1461,10 +1425,8 @@ ShallowWrapper {
                   autoCapitalize="words"
                   autoFocus={true}
                   blurOnSubmit={false}
-                  getRef={[Function]}
                   maxLength={20}
                   onChangeText={[Function]}
-                  onSubmitEditing={[Function]}
                   placeholder="Minimum 4 characters"
                   placeholderTextColor="gray"
                   returnKeyType="next"
@@ -1485,7 +1447,6 @@ ShallowWrapper {
                 <Styled(Input)
                   autoCapitalize="words"
                   blurOnSubmit={true}
-                  getRef={[Function]}
                   maxLength={20}
                   onChangeText={[Function]}
                   placeholder="Minimum 4 characters"
@@ -1554,10 +1515,8 @@ ShallowWrapper {
                     autoCapitalize="words"
                     autoFocus={true}
                     blurOnSubmit={false}
-                    getRef={[Function]}
                     maxLength={20}
                     onChangeText={[Function]}
-                    onSubmitEditing={[Function]}
                     placeholder="Minimum 4 characters"
                     placeholderTextColor="gray"
                     returnKeyType="next"
@@ -1578,7 +1537,6 @@ ShallowWrapper {
                   <Styled(Input)
                     autoCapitalize="words"
                     blurOnSubmit={true}
-                    getRef={[Function]}
                     maxLength={20}
                     onChangeText={[Function]}
                     placeholder="Minimum 4 characters"
@@ -1608,10 +1566,8 @@ ShallowWrapper {
                       autoCapitalize="words"
                       autoFocus={true}
                       blurOnSubmit={false}
-                      getRef={[Function]}
                       maxLength={20}
                       onChangeText={[Function]}
-                      onSubmitEditing={[Function]}
                       placeholder="Minimum 4 characters"
                       placeholderTextColor="gray"
                       returnKeyType="next"
@@ -1644,10 +1600,8 @@ ShallowWrapper {
                       "autoCapitalize": "words",
                       "autoFocus": true,
                       "blurOnSubmit": false,
-                      "getRef": [Function],
                       "maxLength": 20,
                       "onChangeText": [Function],
-                      "onSubmitEditing": [Function],
                       "placeholder": "Minimum 4 characters",
                       "placeholderTextColor": "gray",
                       "returnKeyType": "next",
@@ -1675,7 +1629,6 @@ ShallowWrapper {
                     <Styled(Input)
                       autoCapitalize="words"
                       blurOnSubmit={true}
-                      getRef={[Function]}
                       maxLength={20}
                       onChangeText={[Function]}
                       placeholder="Minimum 4 characters"
@@ -1710,7 +1663,6 @@ ShallowWrapper {
                     "props": Object {
                       "autoCapitalize": "words",
                       "blurOnSubmit": true,
-                      "getRef": [Function],
                       "maxLength": 20,
                       "onChangeText": [Function],
                       "placeholder": "Minimum 4 characters",
@@ -1849,10 +1801,8 @@ ShallowWrapper {
                   autoCapitalize="words"
                   autoFocus={true}
                   blurOnSubmit={false}
-                  getRef={[Function]}
                   maxLength={20}
                   onChangeText={[Function]}
-                  onSubmitEditing={[Function]}
                   placeholder="Minimum 4 characters"
                   placeholderTextColor="gray"
                   returnKeyType="next"
@@ -1873,7 +1823,6 @@ ShallowWrapper {
                 <Styled(Input)
                   autoCapitalize="words"
                   blurOnSubmit={true}
-                  getRef={[Function]}
                   maxLength={20}
                   onChangeText={[Function]}
                   placeholder="Minimum 4 characters"
@@ -2005,10 +1954,8 @@ ShallowWrapper {
                     autoCapitalize="words"
                     autoFocus={true}
                     blurOnSubmit={false}
-                    getRef={[Function]}
                     maxLength={20}
                     onChangeText={[Function]}
-                    onSubmitEditing={[Function]}
                     placeholder="Minimum 4 characters"
                     placeholderTextColor="gray"
                     returnKeyType="next"
@@ -2029,7 +1976,6 @@ ShallowWrapper {
                   <Styled(Input)
                     autoCapitalize="words"
                     blurOnSubmit={true}
-                    getRef={[Function]}
                     maxLength={20}
                     onChangeText={[Function]}
                     placeholder="Minimum 4 characters"
@@ -2098,10 +2044,8 @@ ShallowWrapper {
                       autoCapitalize="words"
                       autoFocus={true}
                       blurOnSubmit={false}
-                      getRef={[Function]}
                       maxLength={20}
                       onChangeText={[Function]}
-                      onSubmitEditing={[Function]}
                       placeholder="Minimum 4 characters"
                       placeholderTextColor="gray"
                       returnKeyType="next"
@@ -2122,7 +2066,6 @@ ShallowWrapper {
                     <Styled(Input)
                       autoCapitalize="words"
                       blurOnSubmit={true}
-                      getRef={[Function]}
                       maxLength={20}
                       onChangeText={[Function]}
                       placeholder="Minimum 4 characters"
@@ -2152,10 +2095,8 @@ ShallowWrapper {
                         autoCapitalize="words"
                         autoFocus={true}
                         blurOnSubmit={false}
-                        getRef={[Function]}
                         maxLength={20}
                         onChangeText={[Function]}
-                        onSubmitEditing={[Function]}
                         placeholder="Minimum 4 characters"
                         placeholderTextColor="gray"
                         returnKeyType="next"
@@ -2188,10 +2129,8 @@ ShallowWrapper {
                         "autoCapitalize": "words",
                         "autoFocus": true,
                         "blurOnSubmit": false,
-                        "getRef": [Function],
                         "maxLength": 20,
                         "onChangeText": [Function],
-                        "onSubmitEditing": [Function],
                         "placeholder": "Minimum 4 characters",
                         "placeholderTextColor": "gray",
                         "returnKeyType": "next",
@@ -2219,7 +2158,6 @@ ShallowWrapper {
                       <Styled(Input)
                         autoCapitalize="words"
                         blurOnSubmit={true}
-                        getRef={[Function]}
                         maxLength={20}
                         onChangeText={[Function]}
                         placeholder="Minimum 4 characters"
@@ -2254,7 +2192,6 @@ ShallowWrapper {
                       "props": Object {
                         "autoCapitalize": "words",
                         "blurOnSubmit": true,
-                        "getRef": [Function],
                         "maxLength": 20,
                         "onChangeText": [Function],
                         "placeholder": "Minimum 4 characters",
