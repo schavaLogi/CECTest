@@ -1,145 +1,190 @@
-"use strict";
-
 import React from 'react';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
 import {Image, NativeModules, StyleSheet, View} from 'react-native';
-import {Body, Button, Container, Content, Header, Icon, Left, Right, Text, Title} from 'native-base';
+import {
+    Body,
+    Button,
+    Container,
+    Content,
+    Header,
+    Icon,
+    Left,
+    Right,
+    Text,
+    Title
+} from 'native-base';
 import CustomSpinner from './CustomSpinner';
 import {loginSuccess, logOut} from '../../actions/auth';
 
 import locStrings from '../../localization';
 import commonStyles from '../styles';
 
+//import { getDevices, signIn } from '../../Api/Api';
+
 const lipModule = NativeModules.LipModule;
 
 class HarmonyRemoteScreen extends React.Component {
-
     constructor() {
         super();
         this.state = {
-            showProgress: false
-        }
+            showProgress: false,
+        };
     }
 
     componentWillUnmount() {
-        console.log("HarmonyRemoteScreen componentWillUnmount");
+        console.log('HarmonyRemoteScreen componentWillUnmount');
     }
 
     async fetchDevices() {
         this.setState({showProgress: false});
-        this.props.navigation.navigate("HDMIInputs")
+        this.props.navigation.navigate('HDMIInputs');
     }
 
     async requestLogin() {
         try {
-            let response = await lipModule.requestLogin({create: false});
-            console.log("newly fulfilled:", response);
+            const response = await lipModule.requestLogin({create: false});
+            console.log('newly fulfilled:', response);
 
             if (response !== null && response.accountToken !== null) {
+                console.log(`newly response.accountToken:${response.accountToken.accessToken}`);
+                /*
+                try {
+                    console.log('newly signIn:', signIn);
+
+                    signIn(response.accountToken)
+                        .then(authResp => getDevices(response.accountToken, authResp.AccountId))
+                        .then((devices) => {
+                            console.log(`response =${devices}`);
+                        });
+                } catch (error) {
+                    console.log(`newly error:${error}`);
+                }
+                */
+
                 this.props.dispatch(loginSuccess(response.accountToken));
+
+
                 this.setState({showProgress: true});
 
                 setTimeout(this.fetchDevices.bind(this), 4000);
             }
         } catch (e) {
             this.props.dispatch(logOut());
-            console.log("newly Error received", e);
+            console.log('newly Error received', e);
         }
     }
 
     render() {
-        console.log("Harmony Remote render ");
+        console.log('Harmony Remote render ');
         return (
             <Container style={commonStyles.container}>
                 <Header>
                     <Left style={commonStyles.headerLeft}>
-                        <Button transparent onPress={() => {
-                            console.log("Pressed on back key");
-                            this.props.navigation.goBack()
-                        }}>
-                            <Icon name='arrow-back'/>
+                        <Button
+                            transparent
+                            onPress={() => {
+                                console.log('Pressed on back key');
+                                this.props.navigation.goBack();
+                            }}
+                        >
+                            <Icon name="arrow-back" />
                         </Button>
                     </Left>
 
                     <Body style={commonStyles.headerBody}>
-                    <Title>{locStrings.harmony_remote}</Title>
+                        <Title>{locStrings.harmony_remote}</Title>
                     </Body>
 
-                    <Right style={commonStyles.headerRight}/>
+                    <Right style={commonStyles.headerRight} />
 
                 </Header>
 
                 <Content style={commonStyles.content}>
 
-                    <Text style={RemoteStyles.textDesc}>
+                    <Text style={remoteStyles.textDesc}>
                         {locStrings.harmony_remote_desc}
                     </Text>
 
-                    <View style={RemoteStyles.imgContainer}>
+                    <View style={remoteStyles.imgContainer}>
 
-                        <Image style={RemoteStyles.img}
-                               source={require('../images/harmony-ultimate-one.png')}/>
+                        <Image
+                            style={remoteStyles.img}
+                            source={require('../images/harmony-ultimate-one.png')}
+                        />
                     </View>
 
 
-                    <View style={RemoteStyles.buttonContainer}>
+                    <View style={remoteStyles.buttonContainer}>
 
-                        <Button block info style={{flex: 1}} onPress={() => {
-                            this.props.navigation.navigate("HDMIInputs")
-                        }}>
+                        <Button
+                            block
+                            info
+                            style={remoteStyles.buttonBlock}
+                            onPress={() => {
+                                this.props.navigation.navigate('HDMIInputs');
+                            }}
+                        >
                             <Text>{locStrings.harmony_account_no}</Text>
                         </Button>
 
-                        <View style={{flex: 0.1}}></View>
+                        <View style={remoteStyles.buttongap} />
 
-                        <Button block primary style={{flex: 1}} onPress={() => {
-                            this.requestLogin()
-                        }}>
+                        <Button
+                            block
+                            primary
+                            style={remoteStyles.buttonBlock}
+                            onPress={() => {
+                                this.requestLogin();
+                            }}
+                        >
                             <Text>{locStrings.harmony_account_yes}</Text>
                         </Button>
                     </View>
 
                 </Content>
 
-                {/*Working code *//*{this.state.showProgress &&
-                    <View style={RemoteStyles.loading}>
-                        <Text style={{color : 'blue'}}>
-                            {'Pairing ...'}
-                        </Text>
-                        <Spinner size='large' color='blue'/>
-                    </View>
-                }*/}
-
                 {this.state.showProgress &&
-                <View style={RemoteStyles.loading}>
-                    <CustomSpinner visible={this.state.showProgress} textContent={"Loading..."}
-                                   textStyle={{color: '#FFF'}}/>
+                <View style={remoteStyles.loading}>
+                    <CustomSpinner
+                        visible={this.state.showProgress}
+                        textContent="Loading..."
+                        textStyle={remoteStyles.loaderText}
+                    />
                 </View>}
             </Container>
         );
     }
 }
 
-const RemoteStyles = StyleSheet.create({
+const loaderBackground = '#FFFFFF7F';
+const loaderTextColor = '#FFFFFF';
+
+const remoteStyles = StyleSheet.create({
     imgContainer: {
         padding: 10,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     img: {
         padding: 10,
         justifyContent: 'center',
         alignItems: 'center',
         width: 200,
-        height: 200
+        height: 200,
     },
     textDesc: {
         padding: 10,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     },
     buttonContainer: {
         padding: 10,
-        flexDirection: 'row'
+        flexDirection: 'row',
+    },
+    buttonBlock: {
+        flex: 1,
+    },
+    buttongap: {
+        flex: 0.1
     },
     loading: {
         position: 'absolute',
@@ -147,9 +192,12 @@ const RemoteStyles = StyleSheet.create({
         right: 0,
         top: 0,
         bottom: 0,
-        backgroundColor: '#FFFFFF7F',
+        backgroundColor: loaderBackground,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+    },
+    loaderText: {
+        color: loaderTextColor
     }
 });
 export default connect()(HarmonyRemoteScreen);

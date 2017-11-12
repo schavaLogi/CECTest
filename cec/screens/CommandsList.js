@@ -69,11 +69,10 @@ const gridStyles = StyleSheet.create({
  * Commands Screen , Which displays Available commands for a given device
  * input: Device must be passed as navigation params
  */
-class CommandsListScreen extends React.Component {
-
+export class CommandsListScreen extends React.Component {
 
     onPressItem = (item) => {
-        console.log("User clicked on item =" + item.id)
+        console.log('User clicked on item =' + item.id);
     };
     renderRowItem = (itemData) => {
         return (
