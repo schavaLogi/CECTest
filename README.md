@@ -28,11 +28,19 @@ react-native link module_name (react-native-code-push/react-native-localization/
 Troubleshoot Advice:
 install all the required modules using command bash (windows command npm might give problem)
 
+Lint:
+npm run lint OR yarn run lint
+
+test:
+npm test or yarn run test
 
 Run :
+
 npm install
+
 cd android && ./gradlew clean
 
 cd ..
+
 react-native run-android
 
