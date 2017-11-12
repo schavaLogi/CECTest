@@ -1,5 +1,4 @@
-"use strict";
-
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import {connect} from 'react-redux';
 
@@ -7,7 +6,19 @@ import {Keyboard, StyleSheet, View} from 'react-native';
 
 import PropTypes from 'prop-types';
 
-import {Body, Button, Container, Content, Form, Header, Input, Item, Label, Text, Title} from 'native-base';
+import {
+    Body,
+    Button,
+    Container,
+    Content,
+    Form,
+    Header,
+    Input,
+    Item,
+    Label,
+    Text,
+    Title
+} from 'native-base';
 
 import locStrings from '../../localization';
 import commonStyles from '../styles';
@@ -20,39 +31,36 @@ export class MeProfileScreen extends React.Component {
         super(props);
         this.state = {
             firstName: '',
-            lastName: ''
+            lastName: '',
         };
-    }
-
-    componentWillUnmount() {
-        console.log("MeProfileScreen componentWillUnmount");
     }
 
     componentDidMount() {
     }
 
+    componentWillUnmount() {
+    }
+
     async onNextButton() {
-        console.log("User clicked on Next button");
         Keyboard.dismiss();
         this.props.dispatch(updateUserInfoStatus(this.state));
 
-        let isBtReady = await enableBTWithPermission();
+        const isBtReady = await enableBTWithPermission();
         if (isBtReady) {
-            this.props.navigation.navigate("HarmonyRemote");
+            this.props.navigation.navigate('HarmonyRemote');
         }
     }
 
     render() {
-        console.log("Me profile Render");
         return (
             <Container style={commonStyles.container}>
                 <Header>
                     <Body style={commonStyles.headerBody}>
-                    <Title>{locStrings.your_name}</Title>
+                        <Title>{locStrings.your_name}</Title>
                     </Body>
                 </Header>
 
-                <Content keyboardShouldPersistTaps={'handled'} style={profileStyles.container}>
+                <Content keyboardShouldPersistTaps="handled" style={profileStyles.container}>
                     <Text style={profileStyles.textDesc}>
                         {locStrings.me_desc}
                     </Text>
@@ -64,15 +72,16 @@ export class MeProfileScreen extends React.Component {
                             <Label>{locStrings.first_name}</Label>
 
                             <Input
-                                  autoCapitalize='words'
-                                onChangeText={(text) => this.setState({firstName: text})}
+                                autoCapitalize="words"
+                                onChangeText={text => this.setState({firstName: text})}
                                 blurOnSubmit={false}
                                 value={this.state.firstName}
-                                autoFocus={true}
+                                autoFocus
                                 maxLength={20}
                                 placeholder={locStrings.name_placeHolder}
                                 placeholderTextColor="gray"
-                                returnKeyType='next'/>
+                                returnKeyType="next"
+                            />
                         </Item>
 
                         <Item stackedLabel last>
@@ -80,31 +89,36 @@ export class MeProfileScreen extends React.Component {
                             <Label>{locStrings.last_name}</Label>
 
                             <Input
-                                autoCapitalize='words'
-                                onChangeText={(text) => this.setState({lastName: text})}
-                                blurOnSubmit={true}
+                                autoCapitalize="words"
+                                onChangeText={text => this.setState({lastName: text})}
+                                blurOnSubmit
                                 value={this.state.lastName}
                                 placeholder={locStrings.name_placeHolder}
                                 placeholderTextColor="gray"
-                                returnKeyType='done'
-                                maxLength={20}/>
+                                returnKeyType="done"
+                                maxLength={20}
+                            />
                         </Item>
                     </Form>
                     <View>
                         {(this.state.firstName.length >= 4 && this.state.lastName.length >= 4) ?
-                            <Button block primary title={''} onPress={() => {
-                                this.onNextButton()
-                            }}>
+                            <Button
+                                block
+                                primary
+                                title=""
+                                onPress={() => {
+                                    this.onNextButton();
+                                }}
+                            >
                                 <Text>{locStrings.next}</Text>
                             </Button> :
-                            <Button disabled block title={''}>
+                            <Button disabled block title="">
                                 <Text>{locStrings.next}</Text>
                             </Button>}
                     </View>
 
                 </Content>
-            </Container>
-        )
+            </Container>);
     }
 }
 
@@ -115,12 +129,12 @@ MeProfileScreen.propTypes = {
 
 const profileStyles = StyleSheet.create({
     container: {
-        padding: 10
+        padding: 10,
     },
     textDesc: {
         padding: 10,
-        fontWeight: 'bold'
-    }
+        fontWeight: 'bold',
+    },
 });
 
 export default connect()(MeProfileScreen);

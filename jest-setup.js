@@ -5,12 +5,12 @@ import { NativeModules } from 'react-native';
 // monkey patching the locale to avoid the error:
 //  Something went wrong initializing the native ReactLocalization module
 NativeModules.ReactLocalization = {
-    language: "en_US",
+    language: 'en_US',
 };
 
 
 jest.mock('react-native-code-push', () => {
-    const cp = (_: any) => (app: any) => app;
+    const cp = () => (app) => app;
     Object.assign(cp, {
         InstallMode: {},
         CheckFrequency: {},

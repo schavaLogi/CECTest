@@ -1,10 +1,7 @@
 import 'react-native';
 
+import cecDevices ,{ initialCECDevices } from '../cecDevices';
 
-import cecDevices from '../cecDevices';
-
-import { initialCECDevices } from '../cecDevices';
-import {CEC_DEVICES} from "../../cec/model/mockCecDevices";
 
 it('returns the same state on an unhandled action', () => {
     expect(cecDevices(initialCECDevices, {})).toMatchSnapshot();

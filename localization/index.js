@@ -1,19 +1,19 @@
 import LocalizedStrings from 'react-native-localization';
 
 
-let locStrings = new LocalizedStrings({
+const locStrings = new LocalizedStrings({
     en: {
-        welcome_desc: "We will help you to setup your CEC test device and run test." +
-        "\n\n\n" +
-        "To start, connect this device to WIFI using setting app.",
-        next: "Next",
+        welcome_desc: 'We will help you to setup your CEC test device and run test.' +
+        '\n\n\n' +
+        'To start, connect this device to WIFI using setting app.',
+        next: 'Next',
         welcome: 'Welcome',
         your_name: 'Your Name',
         me_desc: 'Please enter your name below.',
-        first_name: "First name",
-        last_name: "Last name",
+        first_name: 'First name',
+        last_name: 'Last name',
         name_placeHolder: 'Minimum 4 characters',
-        harmony_remote: "Harmony Remote",
+        harmony_remote: 'Harmony Remote',
         harmony_remote_desc: 'Do you have Harmony remote and Harmony account?',
         harmony_account_yes: 'Yes, Have Harmony',
         harmony_account_no: 'No, Don\'t have Harmony',
@@ -32,22 +32,22 @@ let locStrings = new LocalizedStrings({
         raspberry_pi: 'Raspberry Pi',
         dongle: 'Dongle',
         view_cec_devices: 'View CEC Devices',
-        devices : 'Devices',
-        device : 'Device',
+        devices: 'Devices',
+        device: 'Device',
         no_of_devices: 'Number of Devices',
         devices_desc: 'Excluding the CEC device, How many devices do you have connected to HDMI inputs?',
 
         choose_device_type: 'Choose Device Type',
-        tv : 'TV',
-        avr : 'AVR',
-        playback : 'Playback'
+        tv: 'TV',
+        avr: 'AVR',
+        playback: 'Playback',
     },
     it: {
-        welcome_desc: "We will help you to setup your CEC test device and run test." +
-        "\n\n\n" +
-        "To start, connect this device to WIFI using setting app.",
-        next: "next"
-    }
+        welcome_desc: 'We will help you to setup your CEC test device and run test.' +
+        '\n\n\n' +
+        'To start, connect this device to WIFI using setting app.',
+        next: 'next',
+    },
 });
 
 export default locStrings;

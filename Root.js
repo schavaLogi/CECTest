@@ -1,35 +1,36 @@
-import {StackNavigator} from 'react-navigation';
+import { StackNavigator } from 'react-navigation';
 
-import WelcomeScreen from './cec/screens/Welcome';
-import MeProfileScreen from './cec/screens/MeProfile';
+import Welcome from './cec/screens/Welcome';
+import MeProfile from './cec/screens/MeProfile';
 import HarmonyRemoteScreen from './cec/screens/HarmonyRemote';
 import HDMIInputScreen from './cec/screens/HDMIInputScreen';
-import DeviceInfoScreen from "./cec/screens/DeviceInfo";
-import CommandsListScreen from './cec/screens/CommandsList';
-import ExpandableListScreen from "./cec/screens/ExpandableList";
-import PairDevice from "./cec/screens/PairDevice";
-import SpinnerScreen from "./cec/screens/SpinnerScren";
-import Settings from "./cec/screens/Settings";
-import DevicesCountScreen from "./cec/screens/DevicesCount";
+import DeviceInfoScreen from './cec/screens/DeviceInfo';
+import CommandsList from './cec/screens/CommandsList';
+import ExpandableList from './cec/screens/ExpandableList';
+import PairDevice from './cec/screens/PairDevice';
+import SpinnerScreen from './cec/screens/SpinnerScren';
+import Settings from './cec/screens/Settings';
+import DevicesCountScreen from './cec/screens/DevicesCount';
 
-const Root = StackNavigator({
-        Welcome: {screen: WelcomeScreen},
-        MeProfile: {screen: MeProfileScreen},
-        HarmonyRemote: {screen: HarmonyRemoteScreen},
-        HDMIInputs: {screen: HDMIInputScreen},
-        DeviceInfo: {screen: DeviceInfoScreen},
-        CommandsList: {screen: CommandsListScreen},
-        ExpandableList: {screen: ExpandableListScreen},
-        DevicesCount: {screen: DevicesCountScreen},
-        PairDevice: {screen: PairDevice},
-        Settings: {screen: Settings},
-        Spinner: {screen: SpinnerScreen}
+const Root = StackNavigator(
+    {
+        Welcome: { screen: Welcome },
+        MeProfile: { screen: MeProfile },
+        HarmonyRemote: { screen: HarmonyRemoteScreen },
+        HDMIInputs: { screen: HDMIInputScreen },
+        DeviceInfo: { screen: DeviceInfoScreen },
+        CommandsList: { screen: CommandsList },
+        ExpandableList: { screen: ExpandableList },
+        DevicesCount: { screen: DevicesCountScreen },
+        PairDevice: { screen: PairDevice },
+        Settings: { screen: Settings },
+        Spinner: { screen: SpinnerScreen },
     },
     {
         initialRouteName: 'Welcome',
         mode: 'card',
-        headerMode: 'none'
-    }
+        headerMode: 'none',
+    },
 );
 
 /*

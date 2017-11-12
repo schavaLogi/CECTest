@@ -1,61 +1,40 @@
-"use strict";
-
 import React from 'react';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Alert, Image, NetInfo, Platform, StyleSheet, View} from 'react-native';
 
 import {NavigationActions} from 'react-navigation';
 
-import {Body, Button, Container, Content, Header, Icon, Left, Right, Text, Title} from 'native-base'
+import {
+    Body,
+    Button,
+    Container,
+    Content,
+    Header,
+    Icon,
+    Left,
+    Right,
+    Text,
+    Title
+} from 'native-base';
 
 
-import SendIntentAndroid from 'react-native-send-intent'
+import SendIntentAndroid from 'react-native-send-intent';
 import locStrings from '../../localization';
 import commonStyles from '../styles';
 
 export class WelcomeScreen extends React.Component {
-
     constructor(props) {
         super(props);
     }
 
-    componentWillMount() {
-        console.log("WelcomeScreen componentWillMount");
-    }
-
-    componentDidMount() {
-        console.log("WelcomeScreen componentDidMount");
-    }
-
-    componentWillReceiveProps(nextProps, nextContext) {
-        console.log("WelcomeScreen componentWillReceiveProps" + nextProps + nextContext);
-    }
-
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-        console.log("WelcomeScreen shouldComponentUpdate" + nextProps + nextState + nextContext);
-
         const currentRoute = this.props.nav.routes[this.props.nav.index];
 
         // Check we are active screen or not
         if (currentRoute.routeName !== 'Welcome') return false;
 
         return this.props.isConnected !== nextProps.isConnected;
-    }
-
-
-    showAlertDialog() {
-        Alert.alert('No Internet connection',
-            'Connect to wifi by going through settings App',
-            [{
-                text: 'OK',
-                onPress: () => {
-                    console.log('OK Pressed');
-                    if (Platform.OS === 'android') {
-                        SendIntentAndroid.openSettings("android.settings.SETTINGS")
-                    }
-                }
-            }], {cancelable: false});
     }
 
     componentDidUpdate(prevProps, prevState, prevContext) {
@@ -66,7 +45,7 @@ export class WelcomeScreen extends React.Component {
 
     async onNextButtonClick() {
         try {
-            let connected = await NetInfo.isConnected.fetch();
+            const connected = await NetInfo.isConnected.fetch();
 
             if (!connected) {
                 this.showAlertDialog();
@@ -74,32 +53,50 @@ export class WelcomeScreen extends React.Component {
                 const profileAction = NavigationActions.reset({
                     index: 0,
                     actions: [
-                        NavigationActions.navigate({routeName: 'MeProfile'})
-                    ]
+                        NavigationActions.navigate({routeName: 'MeProfile'}),
+                    ],
                 });
-                this.props.navigation.dispatch(profileAction)
+                this.props.navigation.dispatch(profileAction);
             }
         } catch (err) {
-            console.warn("NetInfo connection check failed err=" + err);
+            throw err;
         }
+    }
+
+    showAlertDialog() {
+        Alert.alert(
+            'No Internet connection',
+            'Connect to wifi by going through settings App',
+            [{
+                text: 'OK',
+                onPress: () => {
+                    if (Platform.OS === 'android') {
+                        SendIntentAndroid.openSettings('android.settings.SETTINGS');
+                    }
+                },
+            }], {cancelable: false},
+        );
     }
 
     render() {
         return (
             <Container style={commonStyles.container}>
                 <Header>
-                    <Left style={commonStyles.headerLeft}/>
+                    <Left style={commonStyles.headerLeft} />
 
                     <Body style={commonStyles.headerBody}>
-                    <Title>{locStrings.welcome}</Title>
+                        <Title>{locStrings.welcome}</Title>
                     </Body>
 
                     <Right style={commonStyles.headerRight}>
-                        <Button transparent title={''}
-                                onPress={() => {
-                                    this.props.navigation.navigate("Settings")
-                                }}>
-                            <Icon name="settings"/>
+                        <Button
+                            transparent
+                            title=""
+                            onPress={() => {
+                                this.props.navigation.navigate('Settings');
+                            }}
+                        >
+                            <Icon name="settings" />
                         </Button>
                     </Right>
                 </Header>
@@ -112,61 +109,70 @@ export class WelcomeScreen extends React.Component {
 
                     <View style={welcomeStyles.imgContainer}>
 
-                        <Image style={welcomeStyles.img}
-                               source={require('../images/002-wifi-connection-signal-symbol.png')}/>
+                        <Image
+                            style={welcomeStyles.img}
+                            source={require('../images/002-wifi-connection-signal-symbol.png')}
+                        />
 
                     </View>
 
-                    <Button block primary onPress={this.onNextButtonClick.bind(this)} title={locStrings.next}>
+                    <Button
+                        block
+                        primary
+                        onPress={this.onNextButtonClick.bind(this)}
+                        title={locStrings.next}
+                    >
                         <Text>{locStrings.next}</Text>
                     </Button>
 
-                    <View style={welcomeStyles.bottom}/>
+                    <View style={welcomeStyles.bottom} />
 
                 </Content>
             </Container>
-        )
+        );
     }
 }
 
 WelcomeScreen.propTypes = {
     isConnected: PropTypes.bool,
     navigation: PropTypes.object.isRequired,
-    nav: PropTypes.object.isRequired
+    nav: PropTypes.object.isRequired,
 };
+
+
+const mapStateToProps = state => ({
+    isConnected: state.net.isConnected,
+    nav: state.nav,
+});
+
+export default connect(mapStateToProps)(WelcomeScreen);
 
 const welcomeStyles = StyleSheet.create({
     container: {
-        padding: 10
+        padding: 10,
     },
     imgContainer: {
         padding: 10,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     img: {
         padding: 10,
         justifyContent: 'center',
         alignItems: 'center',
         width: 200,
-        height: 200
+        height: 200,
     },
     textDesc: {
         padding: 10,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     },
     bottom: {
         height: 30,
-        paddingBottom: 10
-    }
+        paddingBottom: 10,
+    },
 });
 
-const mapStateToProps = state => {
-    return {
-        isConnected: state.net.isConnected,
-        nav: state.nav,
-    }
-};
 
-export default connect(mapStateToProps)(WelcomeScreen);
+
 

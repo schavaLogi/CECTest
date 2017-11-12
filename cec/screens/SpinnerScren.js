@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -7,7 +5,6 @@ import {StyleSheet, View} from 'react-native';
 import {Container, Content, Spinner, Text} from 'native-base';
 
 class SpinnerScreen extends React.Component {
-
     constructor(props) {
         super(props);
     }
@@ -20,7 +17,7 @@ class SpinnerScreen extends React.Component {
                         <Text style={spinnerStyles.text}>
                             {'Pairing ...'}
                         </Text>
-                        <Spinner color="green"/>
+                        <Spinner color="green" />
                     </View>
                 </Content>
             </Container>
@@ -36,18 +33,18 @@ SpinnerScreen.propTypes = {
 
 SpinnerScreen.defaultProps = {
     showProgress: true,
-    text: 'Pairing ...'
-}
+    text: 'Pairing ...',
+};
 
 const spinnerStyles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: 'black',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     text: {
-        color: 'green'
+        color: 'green',
     },
     loading: {
         position: 'absolute',
@@ -57,8 +54,8 @@ const spinnerStyles = StyleSheet.create({
         bottom: 0,
         backgroundColor: '#FFFFFF7F',
         alignItems: 'center',
-        justifyContent: 'center'
-    }
+        justifyContent: 'center',
+    },
 
 });
 

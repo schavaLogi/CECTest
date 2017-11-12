@@ -10,29 +10,36 @@ import {Body, Button, Header, Icon, Left, Right, Title} from 'native-base';
 import Commands from './mockdata';
 import commonStyles from '../styles';
 
-const {width, height} = Dimensions.get('window');
+const {width} = Dimensions.get('window');
 
 const equalWidth = ((width - 20) / 3 );
 
 
 class GridItem extends React.PureComponent {
 
-    _onPress = () => {
-        console.log("User clicked on item")
-        this.props.onPressItem(this.props.item);
-    };
-
     constructor(props) {
         super(props);
     }
 
+    _onPress() {
+        this.props.onPressItem(this.props.item);
+    }
+
     render() {
         return (
-            <Button bordered dark style={gridStyles.item}
-                    androidRippleColor={'#0A74F0'}
-                    onPress={this._onPress} title={''}>
+            <Button
+                bordered
+                dark
+                style={gridStyles.item}
+                androidRippleColor="#0A74F0"
+                onPress={this._onPress.bind(this)}
+                title=""
+            >
 
-                <Text style={{alignSelf: 'center', flexWrap: 'wrap'}}>{this.props.item.command}</Text>
+                <Text
+                    style={gridStyles.itemText}
+                >{this.props.item.command}
+                </Text>
 
             </Button>
         );
@@ -40,7 +47,7 @@ class GridItem extends React.PureComponent {
 }
 
 GridItem.propTypes = {
-    onPressItem: PropTypes.func,
+    onPressItem: PropTypes.func.isRequired,
     item: PropTypes.object
 };
 
@@ -51,6 +58,10 @@ const gridStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         padding: 5
+    },
+    itemText: {
+        alignSelf: 'center',
+        flexWrap: 'wrap'
     }
 });
 
@@ -60,15 +71,16 @@ const gridStyles = StyleSheet.create({
  */
 class CommandsListScreen extends React.Component {
 
-    keyExtractor = (item, index) => item.id;
 
     onPressItem = (item) => {
         console.log("User clicked on item =" + item.id)
     };
     renderRowItem = (itemData) => {
         return (
-            <GridItem onPressItem={this.onPressItem}
-                      item={itemData.item}/>
+            <GridItem
+                onPressItem={this.onPressItem}
+                item={itemData.item}
+            />
         );
     };
 
@@ -92,31 +104,37 @@ class CommandsListScreen extends React.Component {
         }
     }
 
+    keyExtractor(item, index) {
+        return item.id;
+    }
+
     render() {
         return (
             <View style={commandStyles.container}>
                 <Header>
                     <Left style={commonStyles.headerLeft}>
-                        <Button transparent onPress={() => {
-                            console.log("Pressed on back key");
-                            this.props.navigation.goBack()
-                        }}>
-                            <Icon name='arrow-back'/>
+                        <Button
+                            transparent
+                            onPress={() => {
+                                this.props.navigation.goBack();
+                            }}
+                        >
+                            <Icon name='arrow-back' />
                         </Button>
                     </Left>
 
                     <Body style={commonStyles.headerBody}>
-                    <Title>
-                        {typeof this.state.activeDevice !== 'undefined' && this.state.activeDevice !== null &&
-                        this.state.activeDevice.make + " " + this.state.activeDevice.model}
-                    </Title>
+                        <Title>
+                            {typeof this.state.activeDevice !== 'undefined' && this.state.activeDevice !== null &&
+                        this.state.activeDevice.make + ' ' + this.state.activeDevice.model}
+                        </Title>
                     </Body>
-                    <Right style={commonStyles.headerRight}/>
+                    <Right style={commonStyles.headerRight} />
 
                 </Header>
 
                 <FlatList
-                    contentContainerStyle={{padding: 10}}
+                    contentContainerStyle={commandStyles.listContainer}
                     data={this.getDeviceCommands()}
                     numColumns={3}
                     keyExtractor={this.keyExtractor}
@@ -137,6 +155,9 @@ const commandStyles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column'
+    },
+    listContainer: {
+        padding: 10
     }
 });
 

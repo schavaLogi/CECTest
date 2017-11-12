@@ -5,9 +5,36 @@ import {addNavigationHelpers, NavigationActions} from 'react-navigation';
 import Root from './Root';
 import {updateNetStatus} from './actions/network';
 
-export class AppNavigator extends React.Component {
+class AppNavigator extends React.Component {
 
-    shouldCloseApp = nav => {
+    componentWillMount() {
+        BackHandler.addEventListener('hardwareBackPress', this.handleBackPress);
+    }
+
+    componentDidMount() {
+        NetInfo.isConnected.addEventListener('connectionChange', this.handleConnectionInfoChange);
+    }
+
+    componentWillUnmount() {
+        BackHandler.removeEventListener('hardwareBackPress', this.handleBackPress);
+
+        NetInfo.isConnected.removeEventListener('connectionChange', this.handleConnectionInfoChange);
+    }
+
+    goBack =() => {
+        this.props.dispatch(NavigationActions.back());
+    };
+    
+    handleBackPress = () => {
+        if (this.shouldCloseApp(this.props.nav)) {
+            return false;
+        }
+        this.goBack();
+        return true;
+    };
+
+
+    shouldCloseApp = (nav) => {
         if (nav.index > 0) return false;
 
         if (nav.routes) {
@@ -17,36 +44,9 @@ export class AppNavigator extends React.Component {
         return true;
     };
 
-    goBack = () => this.props.dispatch(NavigationActions.back());
-
-    handleBackPress = () => {
-        if (this.shouldCloseApp(this.props.nav)) {
-            return false
-        }
-        this.goBack();
-        return true
-    };
-
     handleConnectionInfoChange = (isConnected) => {
-        console.log("handleConnectionInfoChange isConnected =" + isConnected);
         this.props.dispatch(updateNetStatus(isConnected));
     };
-
-    componentWillMount() {
-        console.log("AppNavigator componentWillMount >>>");
-        BackHandler.addEventListener("hardwareBackPress", this.handleBackPress)
-    }
-
-    componentDidMount() {
-        NetInfo.isConnected.addEventListener('connectionChange', this.handleConnectionInfoChange);
-    }
-
-    componentWillUnmount() {
-        console.log("AppNavigator componentWillUnmount <<<")
-        BackHandler.removeEventListener("hardwareBackPress", this.handleBackPress);
-
-        NetInfo.isConnected.removeEventListener('connectionChange', this.handleConnectionInfoChange);
-    }
 
     render() {
         return (
@@ -64,7 +64,7 @@ const mapStateToProps = state => {
     return {
         nav: state.nav,
         net: state.net
-    }
+    };
 };
 
 export default connect(mapStateToProps)(AppNavigator);

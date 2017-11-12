@@ -4,14 +4,14 @@ export const UPDATE_CEC_DEVICE = 'UPDATE_CEC_DEVICE';
 export function addCECDevice(devices) {
     return {
         type: ADD_CEC_DEVICES,
-        devices: devices
-    }
+        devices,
+    };
 }
 
 export function updateCECDevice(id, device) {
     return {
         type: UPDATE_CEC_DEVICE,
-        id: id,
-        device: device
-    }
+        id,
+        device,
+    };
 }

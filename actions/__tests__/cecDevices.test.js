@@ -2,19 +2,11 @@ import 'react-native';
 
 import configureStore from 'redux-mock-store';
 
-import {addCECDevice, updateCECDevice} from '../../actions/cecDevices';
+import { addCECDevice, updateCECDevice } from '../../actions/cecDevices';
 
-import {CEC_DEVICES} from "../../cec/model/mockCecDevices";
+import { CEC_DEVICES } from '../../cec/model/mockCecDevices';
 
 const store = configureStore()();
-
-console.log("mockStore =" + store);
-
-for (let prop in store) {
-    console.log(prop);
-}
-
-
 
 it('should handle addCECDevice action', async () => {
     await store.dispatch(addCECDevice(CEC_DEVICES));

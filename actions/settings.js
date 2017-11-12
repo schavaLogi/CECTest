@@ -6,6 +6,6 @@ export const SETTINGS_DONGLE = 'Dongle';
 export function updateSettings(selected) {
     return {
         type: UPDATE_SETTINGS,
-        selected: selected
-    }
+        selected,
+    };
 }

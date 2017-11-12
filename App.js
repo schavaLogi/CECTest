@@ -4,24 +4,27 @@
  * @flow
  */
 
-import React, {Component} from 'react';
+import React from 'react';
 
 import {Provider} from 'react-redux';
 import {applyMiddleware, createStore} from 'redux';
-import logger from 'redux-logger'
-import AppReducer from "./reducers/index";
+import logger from 'redux-logger';
+import codePush from 'react-native-code-push';
+import AppReducer from './reducers/index';
 
-import AppNavigator from './AppNavigator'
+import AppNavigator from './AppNavigator';
 
-import codePush from "react-native-code-push";
 
-class App extends Component<{}> {
-    store = createStore(AppReducer, applyMiddleware(logger));
+const store = createStore(AppReducer, applyMiddleware(logger));
+
+class AppComponent extends React.Component {
+    componentDidMount(){
+    }
 
     render() {
         return (
-            <Provider store={this.store}>
-                <AppNavigator/>
+            <Provider store={store}>
+                <AppNavigator />
             </Provider>
         );
     }
@@ -33,6 +36,6 @@ let codePushOptions = {
     InstallMode: codePush.InstallMode.ON_NEXT_RESTART
 };
 
-App = codePush(codePushOptions)(App);
+const App = codePush(codePushOptions)(AppComponent);
 
-export default App
+export default App;

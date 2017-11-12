@@ -2,14 +2,14 @@ import 'react-native';
 import React from 'react';
 // Mock store
 import configureStore from 'redux-mock-store';
-import {configure, shallow} from 'enzyme';
+import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import Welcome, {WelcomeScreen} from '../Welcome'
+import Welcome, { WelcomeScreen } from '../Welcome';
 // Note: test renderer must be required after react-native.
 // UI Dependency
-import {Button, Icon, Text} from "native-base";
-import locStrings from "../../../localization";
-import sinon from "sinon";
+import { Button, Icon, Text } from 'native-base';
+import locStrings from '../../../localization';
+import sinon from 'sinon';
 
 configure({ adapter: new Adapter() });
 
@@ -17,8 +17,8 @@ configure({ adapter: new Adapter() });
 const middlewares = []; // you can mock any middlewares here if necessary
 const mockStore = configureStore(middlewares);
 const initialState = {
-    nav : {routes: [{routeName: 'Welcome', key : 'id_1eqweqwe'}], index : 0},
-    net : {isConnected : false}
+    nav: { routes: [{ routeName: 'Welcome', key: 'id_1eqweqwe' }], index: 0 },
+    net: { isConnected: false },
 };
 
 describe('WelcomeScreen Testing', () => {
@@ -27,17 +27,17 @@ describe('WelcomeScreen Testing', () => {
 
 
     const props = {
-        nav: {routes: [{routeName: 'Welcome', key : 'id_1eqweqwe'}], index : 0},
-        navigation : {navigate : jest.fn() , dispatch: jest.fn()},
-        isConnected : true
+        nav: { routes: [{ routeName: 'Welcome', key: 'id_1eqweqwe' }], index: 0 },
+        navigation: { navigate: jest.fn(), dispatch: jest.fn() },
+        isConnected: true,
     };
 
     beforeEach(() => {
-        wrapper = shallow(<WelcomeScreen {...props}/>, { lifecycleExperimental: true });
+        wrapper = shallow(<WelcomeScreen {...props} />, { lifecycleExperimental: true });
         spy = sinon.spy(WelcomeScreen.prototype, 'componentDidUpdate');
     });
 
-    afterEach(() =>{
+    afterEach(() => {
         spy.restore();
     });
 
@@ -46,7 +46,7 @@ describe('WelcomeScreen Testing', () => {
         expect(wrapper.dive()).toMatchSnapshot();
     });
 
-    it('Check Welcome screen content Text with 2 Buttons', () =>{
+    it('Check Welcome screen content Text with 2 Buttons', () => {
         const render = wrapper.dive();
 
         // Check Rendered View count (Button, Text, Icon)
@@ -55,56 +55,54 @@ describe('WelcomeScreen Testing', () => {
         expect(wrapper.find(Icon).length).toBe(1);
 
 
-        //Check Welcome text description
+        // Check Welcome text description
         const displayText = wrapper.find(Text).get(0).props.children;
         expect(displayText).toEqual(locStrings.welcome_desc);
 
         // Check Icon name property
         expect(render.find(Icon).props().name).toEqual('settings');
 
-        /*for (var prop in render.find(Icon).props()) {
+    /* for (var prop in render.find(Icon).props()) {
             console.log(prop);
-        }*/
+        } */
     });
 
 
     it('Click on Next Button when not Connected state', () => {
-        wrapper.setProps({...props, isConnected : false});
+        wrapper.setProps({ ...props, isConnected: false });
         const render = wrapper.dive();
 
-        render.find(Button).forEach(child => {
+        render.find(Button).forEach((child) => {
             child.simulate('press');
         });
     });
 
 
     it('Click on Next Button with Connected state', () => {
-        wrapper.setProps({...props, isConnected : true});
+        wrapper.setProps({ ...props, isConnected: true });
         const render = wrapper.dive();
 
-        render.find(Button).forEach(child => {
+        render.find(Button).forEach((child) => {
             child.simulate('press');
         });
     });
 
-    it('Check Lifecycle Api triggered when props changes', () =>{
-        wrapper.setProps({...props, isConnected : false});
+    it('Check Lifecycle Api triggered when props changes', () => {
+        wrapper.setProps({ ...props, isConnected: false });
         const render = wrapper.dive();
         expect(spy.calledOnce).toBe(true);
-    })
+    });
 });
-
 
 
 it('Render Connected WelcomeScreen as expected', () => {
     const props = {
-        navigation : {navigate : jest.fn()},
+        navigation: { navigate: jest.fn() },
     };
     const wrapper = shallow(
-        <Welcome {...props}/>,
-        { context: { store: mockStore(initialState) } }
+        <Welcome {...props} />,
+        { context: { store: mockStore(initialState) } },
     );
     expect(wrapper.dive()).toMatchSnapshot();
 });
-
 
