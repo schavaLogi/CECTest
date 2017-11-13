@@ -9,7 +9,7 @@ import Welcome, { WelcomeScreen } from '../Welcome';
 // UI Dependency
 import { Button, Icon, Text } from 'native-base';
 import locStrings from '../../../localization';
-import sinon from 'sinon';
+
 
 configure({ adapter: new Adapter() });
 

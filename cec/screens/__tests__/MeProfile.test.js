@@ -3,7 +3,6 @@ import React from 'react';
 
 // Mock store
 import configureStore from 'redux-mock-store';
-import {Platform} from 'react-native';
 
 import { shallow, configure } from 'enzyme';
 import { Button, Input, Text } from 'native-base';
