@@ -3,10 +3,11 @@ import React from 'react';
 
 // Mock store
 import configureStore from 'redux-mock-store';
+import {Platform} from 'react-native';
+
 import { shallow, configure } from 'enzyme';
 import { Button, Input, Text } from 'native-base';
 import Adapter from 'enzyme-adapter-react-16';
-import sinon from 'sinon';
 
 import MeProfile, { MeProfileScreen } from '../MeProfile';
 import locStrings from '../../../localization';
@@ -19,6 +20,8 @@ const initialState = {
     navigation: { navigate: jest.fn(), dispatch: jest.fn() },
     user: { firstName: '', lastName: '' },
 };
+
+
 
 describe('MeProfileScreen Testing', () => {
     let wrapper;
@@ -119,12 +122,28 @@ describe('MeProfileScreen Testing', () => {
         expect(wrapper.state()).toEqual(modifiedState);
     });
 
+    it('Click on Next button with Platform as Android to check BT API' , () =>{
+        const render = wrapper.dive();
+        const newTextValue = 'Hello';
+
+        render.find(Input).forEach((child) => {
+            child.simulate('changeText', newTextValue);
+        });
+
+
+        // Click on Next Button as platform as Android
+        render.find(Button).forEach((child) => {
+            child.simulate('press');
+        });
+    });
+
     it('Check component unmounted successfully', () => {
-        const spy = sinon.spy(MeProfileScreen.prototype, 'componentWillUnmount');
-        expect(spy.calledOnce).toBe(false);
+        const spy = jest.spyOn(MeProfileScreen.prototype, 'componentWillUnmount');
+        expect(spy).toHaveBeenCalledTimes(0);
         wrapper.unmount();
-        expect(spy.calledOnce).toBe(true);
-        spy.restore();
+        expect(spy).toHaveBeenCalledTimes(1);
+        spy.mockReset();
+        spy.mockRestore();
     });
 });
 

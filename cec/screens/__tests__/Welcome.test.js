@@ -34,11 +34,12 @@ describe('WelcomeScreen Testing', () => {
 
     beforeEach(() => {
         wrapper = shallow(<WelcomeScreen {...props} />, { lifecycleExperimental: true });
-        spy = sinon.spy(WelcomeScreen.prototype, 'componentDidUpdate');
+        spy = jest.spyOn(WelcomeScreen.prototype, 'componentDidUpdate');
     });
 
     afterEach(() => {
-        spy.restore();
+        spy.mockReset();
+        spy.mockRestore();
     });
 
 
@@ -89,8 +90,8 @@ describe('WelcomeScreen Testing', () => {
 
     it('Check Lifecycle Api triggered when props changes', () => {
         wrapper.setProps({ ...props, isConnected: false });
-        const render = wrapper.dive();
-        expect(spy.calledOnce).toBe(true);
+        wrapper.dive();
+        expect(spy).toHaveBeenCalled();
     });
 });
 

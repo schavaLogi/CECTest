@@ -1,7 +1,6 @@
 import { PermissionsAndroid, Platform } from 'react-native';
-
 import BleManager from 'react-native-ble-manager';
-
+import { onAndroid } from './Utility';
 
 async function requestBTPermission() {
     try {
@@ -32,7 +31,7 @@ async function enableBT() {
 
 export async function enableBTWithPermission() {
     let btEnabled = true;
-    if (Platform.OS === 'android') {
+    if (onAndroid()) {
         btEnabled = false;
         btEnabled = await enableBT();
         if (btEnabled && Platform.Version >= 23) {

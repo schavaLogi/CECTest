@@ -1,12 +1,19 @@
 // @flow
 
-import { NativeModules } from 'react-native';
+import {NativeModules} from 'react-native';
 
 // monkey patching the locale to avoid the error:
 //  Something went wrong initializing the native ReactLocalization module
 NativeModules.ReactLocalization = {
     language: 'en_US',
 };
+
+/*jest.mock('Platform', () => {
+    const Platform = require.requireActual('Platform');
+    Object.assign( Platform , {'mockPlatform' : ''});
+    Platform.OS = Platform['mockPlatform'];
+    return Platform;
+});*/
 
 
 jest.mock('react-native-code-push', () => {

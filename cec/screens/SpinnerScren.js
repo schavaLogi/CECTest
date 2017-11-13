@@ -9,6 +9,10 @@ class SpinnerScreen extends React.Component {
         super(props);
     }
 
+    componetDidUpdate() {
+
+    }
+
     render() {
         return (
             <Container style={spinnerStyles.container}>
