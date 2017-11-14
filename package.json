@@ -4,8 +4,8 @@
 	"private": true,
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"ci_test": "jest --outputFile=buddybuild_artifacts/Jest/jest.json --json",
-		"test": "jest",
+		"ci_test": "jest --coverage --outputFile=buddybuild_artifacts/Jest/jest.json --json",
+		"test": "jest --coverage",
 		"flow": "flow",
 		"lint": "eslint --fix **/*.js"
 	},

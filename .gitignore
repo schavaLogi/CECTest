@@ -54,4 +54,5 @@ buck-out/
 
 #coverage
 coverage/
+buddybuild_artifacts/
 .tmp/
