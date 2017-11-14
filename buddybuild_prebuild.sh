@@ -5,4 +5,5 @@ mkdir buddybuild_artifacts/Jest
 
 #jest --outputFile=buddybuild_artifacts/Jest/jest.json --json
 # Some users might want to just run
-npm ci_test #instead, depending on how they have everything set up
+npm run test --coverage --outputFile=buddybuild_artifacts/Jest/jest.json --json
+#instead, depending on how they have everything set up
